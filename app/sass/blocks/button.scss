@@ -1,0 +1,40 @@
+.button {
+  width: 290px;
+  padding: 13px 25px;
+
+  text-align: center;
+
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: #dc025e;
+
+  border: 0;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #fc2a82;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+  }
+  
+  &--gray {
+    background-color: #6b6b6b;
+  }
+  
+  &--gray:hover {
+    background-color: #929191;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .button {
+    font-size: 21px;
+  }
+}

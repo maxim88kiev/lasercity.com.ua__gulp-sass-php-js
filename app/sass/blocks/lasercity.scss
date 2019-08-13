@@ -1,0 +1,255 @@
+.lasercity {
+  margin-top: 35px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.laserciti__wrapper {
+  padding: 0 15px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.lasercity__title {
+  font-size: 18px;
+}
+
+.lasercity__for {
+  align-self: center;
+
+  display: flex;
+
+  margin: 25px 0 0;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.lasercity__for-button {
+  padding: 0;
+  margin: 0 5px;
+
+  background-color: transparent;
+
+  border: 0;
+  border-bottom: 1px solid transparent;
+
+  &--active {
+    color: #dc025e;
+
+    border-bottom: 1px solid #dc025e;
+  }
+}
+
+.lasercity__steps {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 25px;
+  padding: 0;
+
+  .slider__list {
+    display: none;
+
+    width: unset;
+    padding: 0 15px;
+  }
+
+  .slider__list--active {
+    display: block;
+  }
+
+  .slider__button--prev,
+  .slider__button--next {
+    margin-top: 20px;
+  }
+}
+
+.lasercity__steps-list {
+  @include list-unstyled;
+
+  display: flex;
+  justify-content: center;
+}
+
+.lasercity__steps-item {
+  display: none;
+
+  min-height: 186px;
+
+  &--active {
+    display: block;
+  }
+}
+
+.lasercity__steps-wrapper {
+  margin: 0;
+  padding: 13px 0 13px 80px;
+
+  background: 0 15px no-repeat;
+  background-size: 83px;
+
+  &--partner-one {
+    background-image: url('../img/partners-step-1.svg');
+  }
+
+  &--partner-two {
+    background-image: url('../img/partners-step-2.svg');
+  }
+
+  &--partner-three {
+    background-image: url('../img/partners-step-3.svg');
+  }
+
+  &--customer-one {
+    background-image: url('../img/clients-step-1.svg');
+  }
+
+  &--customer-two {
+    background-image: url('../img/clients-step-2.svg');
+  }
+
+  &--customer-three {
+    background-image: url('../img/clients-step-3.svg');
+  }
+}
+
+.lasercity__step {
+  font-size: 30px;
+  color: #cccccc;
+  font-weight: normal;
+
+  & span {
+    color: #dc025e;
+    font-weight: bold;
+  }
+}
+
+.lasercity__task {
+  display: flex;
+  flex-direction: column;
+
+  margin: 12px 0 0;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  & br {
+    display: none;
+  }
+}
+
+.lasercity__steps-description {
+  max-width: 350px;
+  margin: 13px 0 0;
+
+  color: #757575;
+}
+
+.lasercity__registers {
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  padding: 30px 0;
+
+  background-color: #f2f2f2;
+}
+
+.lasercity__register {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .lasercity {
+    order: 3;
+
+    margin-top: 95px;
+  }
+
+  .lasercity__title {
+    font-size: 30px;
+  }
+
+  .laserciti__wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+
+  .lasercity__for {
+    font-size: 21px;
+  }
+
+  .lasercity__steps {
+    margin-top: 40px;
+
+    & .slider__list {
+      padding: 0;
+    }
+
+    & .slider__list--active {
+      min-width: 100%;
+    }
+
+    & .slider__button--prev,
+    & .slider__button--next {
+      display: none;
+    }
+  }
+
+  .lasercity__steps-list {
+    justify-content: space-between;
+  }
+
+  .lasercity__steps-item {
+    display: block;
+
+    width: 32%;
+    min-height: 231px;
+  }
+
+  .lasercity__steps-wrapper {
+    min-height: 161px;
+
+    padding: 40px 0 40px 165px;
+
+    background-position: 0 0;
+    background-size: 165px;
+  }
+
+  .lasercity__task {
+    margin-top: 0;
+
+    font-size: 18px;
+    text-transform: uppercase;
+
+    & br {
+      display: block;
+    }
+  }
+
+  .lasercity__steps-description {
+    font-size: 16px;
+  }
+
+  .lasercity__registers {
+    margin-top: 20px;
+  }
+
+  .lasercity__register {
+    display: block;
+
+    width: 460px;
+
+    &--customers {
+      margin-left: 30px;
+    }
+  }
+}
+

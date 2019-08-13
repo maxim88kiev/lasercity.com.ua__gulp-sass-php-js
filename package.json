@@ -1,0 +1,25 @@
+{
+  "name": "lasercity",
+  "version": "1.0.0",
+  "description": "LaserCity",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Whatislove",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "del": "^3.0.0",
+    "lighthouse": "^5.0.0"
+  }
+}

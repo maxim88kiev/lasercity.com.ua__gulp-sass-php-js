@@ -1,0 +1,170 @@
+.faq-discussion-popup {
+  display: none;
+
+  z-index: 1000;
+
+  position: fixed;
+  left: 50%;
+  top: 100px;
+
+  flex-direction: column;
+
+  width: 290px;
+  margin-left: -145px;
+  padding-bottom: 15px;
+
+  background-color: #ffffff;
+
+  border-top: 7px solid #dc025e;
+}
+
+body[data-current-value = "discussion"] {
+  .faq-discussion-popup  {
+    display: flex;
+  }
+}
+
+
+.faq-discussion-popup__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 15px;
+
+  background-color: #fef2f7;
+}
+
+.faq-discussion-popup__title {
+  margin: 15px 0 0;
+
+  font-size: 18px;
+}
+
+.faq-discussion-popup__copyright {
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  color: #e60060;
+  text-transform: uppercase;
+
+  & span {
+    color: #ff0158;
+  }
+
+  & .logo {
+    margin-left: 2px;
+    padding: 3px 3px;
+
+    font-size: 12px;
+    color: #e60060;
+    font-weight: bold;
+
+    border: 1px solid #e60060;
+    border-radius: 50%;
+  }
+}
+
+.faq-discussion-popup__form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+.faq-discussion-popup__quesion {
+  height: 30px;
+  padding: 3px 5px;
+
+  resize: none;
+}
+
+.faq-discussion-popup__description {
+  height: 60px;
+  margin-top: 5px;
+  padding: 3px 5px;
+
+  resize: none;
+}
+
+.faq-discussion-popup__button {
+  align-self: center;
+
+  width: 160px;
+  margin-top: 15px;
+  padding: 8px 0;
+}
+
+
+.faq-discussion-popup__closed {
+  top: 5px;
+  right: 5px;
+}
+
+@media(min-width: $desktop-width) {
+  .faq-discussion-popup {
+    top: 113px;
+
+    width: 440px;
+    margin-left: -220px;
+    padding-bottom: 37px;
+  }
+
+  .faq-discussion-popup__title {
+    margin-top: 28px;
+
+    font-size: 24px;
+  }
+
+  .faq-discussion-popup__copyright {
+    margin-top: 5px;
+
+    font-size: 28px;
+
+    & .logo {
+      margin-left: 2px;
+      padding: 3px 3px;
+
+      font-size: 18px;
+    }
+  }
+
+  .faq-discussion-popup__form {
+    margin-top: 35px;
+  }
+
+  .faq-discussion-popup__quesion {
+    height: 54px;
+    padding: 10px 15px;
+
+    font-size: 16px;
+  }
+
+  .faq-discussion-popup__description {
+    height: 115px;
+    margin-top: 10px;
+    padding: 10px 15px;
+
+    font-size: 16px;
+  }
+
+  .faq-discussion-popup__button {
+    width: 204px;
+    margin-top: 30px;
+
+    font-size: 16px;
+  }
+
+  .faq-discussion-popup__closed {
+    width: 20px;
+    height: 20px;
+    right: 5px;
+
+    &::before,
+    &::after {
+      width: 20px;
+    }
+  }
+}

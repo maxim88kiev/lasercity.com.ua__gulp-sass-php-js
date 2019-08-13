@@ -1,0 +1,50 @@
+.article-warning {
+  min-height: 87px;
+  margin: 15px 0;
+  padding: 20px 15px 12px;
+
+  background: #fcfcfc url(../img/pay-attention--empty.svg) no-repeat;
+  background-position: 18px 10px;
+  background-size: 37px;
+
+  strong {
+    display: block;
+
+    margin-left: 50px;
+
+    color: #e20864;
+    font-size: 14px;
+  }
+
+  p {
+    margin: 15px 0 0;
+    line-height: 15px;
+    color: #333333;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .article-warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 25px 0;
+    padding-left: 100px;
+
+    background-position: 20px 50%;
+    background-size: 63px;
+
+    strong {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

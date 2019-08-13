@@ -1,0 +1,194 @@
+.article-contraindications {
+  margin: 20px 0 15px;
+}
+
+.article-contraindications__title {
+  font-size: 14px;
+}
+
+.article-contraindications__text {
+  margin: 15px 0 0;
+  padding: 0 15px;
+
+  line-height: 15px;
+  color: #333333;
+}
+
+.article-contraindications__heading {
+  display: block;
+
+  margin: 15px 0 0;
+  padding: 0 15px;
+
+  font-size: 14px;
+  color: #333333;
+}
+
+.article-contraindications__list {
+  @include list-unstyled;
+  margin-top: 15px;
+  padding: 20px 15px;
+
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.article-contraindications__item {
+  position: relative;
+
+  margin-top: 5px;
+  padding-left: 55px;
+
+  line-height: 15px;
+  color: #333333;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+    padding: 10px 0;
+
+    border-bottom: 1px dashed #d8d8d8;
+  }
+
+  &:last-child {
+    span {
+      border: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    content: '';
+    width: 48px;
+    height: 48px;
+
+    background-color: #fce5ef;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 32px;
+
+    border-radius: 50%;
+  }
+
+  &--tan::before {
+    background-image: url(../img/contraindications--tan.svg);
+  }
+
+  &--pregnancy::before {
+    background-image: url(../img/contraindications--pregnancy.svg);
+  }
+
+  &--infections::before {
+    background-image: url(../img/contraindications--infections.svg);
+
+  }
+
+  &--injury::before {
+    background-image: url(../img/contraindications--injury.svg);
+  }
+
+  &--surgery::before {
+    background-image: url(../img/contraindications--surgery.svg);
+  }
+
+  &--immunity::before {
+    background-image: url(../img/contraindications--immunity.svg);
+  }
+
+  &--sugardiabetes::before {
+    background-image: url(../img/contraindications--sugardiabetes.svg);
+    background-size: 28px;
+  }
+
+  &--wet::before {
+    background-image: url(../img/contraindications--wet.svg);
+    background-size: 28px;
+  }
+
+  &--shower::before {
+    background-image: url(../img/contraindications--shower.svg);
+    background-size: 28px;
+  }
+
+  &--sponge::before {
+    background-image: url(../img/contraindications--sponge.svg);
+    background-size: 28px;
+  }
+
+  &--clothes::before {
+    background-image: url(../img/contraindications--clothes.svg);
+    background-size: 28px;
+  }
+
+  &--gym::before {
+    background-image: url(../img/contraindications--gym.svg);
+    background-size: 28px;
+  }
+
+  &--epilation::before {
+    background-image: url(../img/contraindications--epilation.svg);
+    background-size: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .article-contraindications {
+    margin: 25px 0;
+  }
+
+
+  .article-contraindications__title {
+    font-size: 21px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .article-contraindications__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .article-contraindications__text {
+    margin-top: 20px;
+
+    font-size: 16px;
+    line-height: 21px;
+
+    &:first-letter {
+      margin-left: 10px;
+    }
+  }
+
+  .article-contraindications__heading {
+    margin-top: 20px;
+
+    font-size: 18px;
+  }
+
+
+  .article-contraindications__list {
+    margin: 25px 15px 0;
+    padding: 20px 35px;
+
+    border: 1px solid #ebebeb;
+  }
+
+  .article-contraindications__item {
+    padding-left: 63px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

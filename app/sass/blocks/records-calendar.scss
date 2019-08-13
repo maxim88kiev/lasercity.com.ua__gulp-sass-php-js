@@ -1,0 +1,165 @@
+.records-calendar {
+  padding: 0 15px;
+}
+
+.records-calendar__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.records-calendar__buttons {
+  margin: 0;
+}
+
+.records-calendar__button {
+  position: relative;
+
+  width: 50px;
+  height: 35px;
+
+  background-color: #fafafa;
+
+  border: 0;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+    content: '';
+    width: 15px;
+    height: 15px;
+
+    border-right: 3px solid #dc025e;
+    border-bottom: 3px solid #dc025e;
+  }
+
+  &--prev {
+    &::before {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
+
+  &--next {
+    margin-left: 7px;
+  }
+}
+
+.records-calendar__title {
+  margin-top: 10px;
+
+  font-size: 16px;
+}
+
+.records-calendar__list {
+  display: flex;
+  justify-content: center;
+
+  @include list-unstyled;
+  margin-top: 15px;
+}
+
+.records-calendar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 36px;
+  margin-left: 6px;
+
+  border-top: 6px solid #dedee0;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.records-calendar__item-weekday {
+  margin-top: 14px;
+
+  font-size: 18px;
+}
+
+.records-calendar__item-day {
+  margin-top: 10px;
+
+  font-size: 21px;
+}
+
+.records-calendar__item-times {
+  @include list-unstyled;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.records-calendar__item-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 5px;
+  padding: 8px 3px;
+
+  background-color: #fff5f9;
+
+  border-radius: 5px;
+}
+
+@media (min-width: $desktop-width) {
+  .records-calendar__header {
+    flex-direction: row;
+  }
+
+  .records-calendar__button {
+    width: 64px;
+    height: 44px;
+
+    &:before {
+      width: 17px;
+      height: 17px;
+
+      border-width: 4px;
+    }
+  }
+
+  .records-calendar__title {
+    margin: 0 0 0 25px;
+
+    font-size: 18px;
+  }
+
+  .records-calendar__list {
+    justify-content: flex-start;
+
+    margin-top: 30px;
+  }
+
+  .records-calendar__item {
+    max-width: 115px;
+
+    margin-left: 20px;
+  }
+
+  .records-calendar__item-weekday,
+  .records-calendar__item-day {
+    margin-top: 12px;
+
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .records-calendar__item-time {
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 115px;
+    max-width: 115px;
+
+    padding: 8px 15px;
+
+    font-size: 16px;
+  }
+}

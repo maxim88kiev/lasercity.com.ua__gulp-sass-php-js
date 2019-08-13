@@ -1,0 +1,23 @@
+<svg width="95" height="95" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95">
+    <style type="text/css">
+        .st0{fill:url(#SVGID_1_);}
+        .st1{fill:url(#SVGID_2_);}
+        .st2{fill:#DC025E;}
+    </style>
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.6842" y1="57.6842" x2="75.7674" y2="57.6842" gradientTransform="matrix(1.1875 0 0 1.1875 0.375 -21)">
+        <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0"/>
+        <stop offset="1" style="stop-color:#E20A65"/>
+    </linearGradient>
+    <path class="st0" d="M47.5,90.3c-23.6,0-42.8-19.1-42.8-42.8S23.9,4.8,47.5,4.8S90.3,24,90.3,47.5C90.3,71.1,71.1,90.3,47.5,90.3z M47.5,6.5c-22.6,0-41,18.4-41,41s18.4,41,41,41s41-18.4,41-41S70.1,6.5,47.5,6.5z"/>
+    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1.3842" y1="57.6842" x2="77.9842" y2="57.6842" gradientTransform="matrix(1.1875 0 0 1.1875 0.375 -21)">
+        <stop offset="0" style="stop-color:#F6E2EE"/>
+        <stop offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+    </linearGradient>
+    <path class="st1" d="M47.5,93C22.4,93,2,72.6,2,47.5S22.4,2,47.5,2S93,22.4,93,47.5S72.6,93,47.5,93z M47.5,3.9 c-24,0-43.6,19.6-43.6,43.6s19.6,43.6,43.6,43.6s43.6-19.6,43.6-43.6S71.5,3.9,47.5,3.9z"/>
+    <path class="st2" d="M57.8,42.4H37.2c-0.5,0-0.8,0.4-0.8,0.7c0,0.4,0.4,0.7,0.8,0.7H58c0.5,0,0.8-0.4,0.8-0.7 C58.8,42.8,58.3,42.4,57.8,42.4z"/>
+    <path class="st2" d="M37.2,37.9h8.3c0.5,0,0.8-0.4,0.8-0.7s-0.4-0.7-0.8-0.7h-8.3c-0.5,0-0.8,0.4-0.8,0.7 C36.3,37.5,36.7,37.9,37.2,37.9z"/>
+    <path class="st2" d="M57.8,48.5H37.2c-0.5,0-0.8,0.4-0.8,0.7c0,0.4,0.4,0.7,0.8,0.7H58c0.5,0,0.8-0.4,0.8-0.7 C58.8,48.8,58.3,48.5,57.8,48.5z"/>
+    <path class="st2" d="M57.8,54.4H37.2c-0.5,0-0.8,0.4-0.8,0.7c0,0.4,0.4,0.7,0.8,0.7H58c0.5,0,0.8-0.4,0.8-0.7 C58.8,54.7,58.3,54.4,57.8,54.4z"/>
+    <path class="st2" d="M57.8,60.4H37.2c-0.5,0-0.8,0.4-0.8,0.7s0.4,0.7,0.8,0.7H58c0.5,0,0.8-0.4,0.8-0.7 C58.7,60.8,58.3,60.4,57.8,60.4z"/>
+    <path class="st2" d="M54.6,22.5H28v47.6h38.6V34.1L54.6,22.5z M55.1,25.2l8.7,8.4h-8.7V25.2z M29.7,68.6V24.1h23.8v11.2H65v33.4 H29.7V68.6z"/>
+</svg>

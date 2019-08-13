@@ -1,0 +1,322 @@
+.records-client {
+  border-top: 2px solid #fce5ef;
+
+  padding-bottom: 50px;
+}
+
+.records-client__applications {
+  margin-top: 23px;
+
+  .records-applications__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .records-applications__item {
+    width: unset;
+    padding: 6px 10px;
+
+    border: 0;
+
+    span {
+      display: none;
+    }
+  }
+
+  .records-applications__offer {
+    time {
+      align-items: flex-start;
+      background-position: 100% 0;
+    }
+  }
+
+  .records-applications__offer-wrapper {
+    margin-left: 15px;
+  }
+
+  .rating-salon-stars {
+    margin-left: 5px;
+  }
+
+  .records-applications__offer-contact {
+    margin-left: 5px;
+  }
+}
+
+.records-client__calendar {
+  margin-top: 42px;
+}
+
+.records-client__title {
+  display: none;
+}
+
+.records-client__courses,
+.records-client__apparatus {
+  margin-top: 35px;
+}
+
+.records-client__courses-title,
+.records-client__apparatus-title {
+  margin: 0;
+  padding: 0 15px;
+
+  font-size: 16px;
+}
+
+.records-client__courses-list,
+.records-client__apparatus-list {
+  position: relative;
+  
+  @include list-unstyled;
+  margin-top: 11px;
+
+  border-top: 1px solid #e9e9eb;
+
+  &::before {
+    position: absolute;
+    top: -3px;
+
+    content: '';
+    width: 100%;
+    height: 1px;
+
+    background-color: #e9e9eb;
+  }
+}
+
+.records-client__courses-item {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.records-client__course-list {
+  display: flex;
+
+  @include list-unstyled;
+  margin-top: 8px;
+}
+
+.records-client__course-item {
+  width: 35px;
+  padding-bottom: 4px;
+
+  font-size: 10px;
+
+  border-bottom: 5px solid;
+
+  output {
+    padding: 0 3px;
+  }
+
+  &--done {
+    border-color: #dc025e;
+
+    output {
+      color: #ffffff;
+      background-color: #dc025e;
+    }
+  }
+
+  &--process {
+    border-color: #ffc5dc;
+    
+    output {
+      background-color: #ffc5dc;
+    }
+  }
+
+  &--none {
+    border-color: #f1f1f1;
+    
+    output {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+.records-client__apparatus-item {
+  position: relative;
+
+  margin-top: 15px;
+  padding-left: 40px;
+
+  &:first-child {
+    margin-top: 23px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+
+    content: '';
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #ffd8e7;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .records-client {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 110px;
+
+    border: 0;
+  }
+
+  .records-client__applications {
+    margin-top: 65px;
+
+    .records-applications__list {
+      justify-content: flex-start;
+    }
+
+    .records-applications__item {
+      padding: 10px 22px;
+
+      span {
+        display: inline;
+      }
+    }
+
+    .records-applications__offer {
+      time {
+        align-items: center;
+      }
+    }
+
+    .records-applications__offer-name {
+      font-weight: bold;
+    }
+
+    .records-applications__offer-rating {
+      margin-left: 70px;
+
+      & .rating-salon__point {
+        font-size: 21px;
+      }
+
+      & .rating-salon-stars {
+        margin: 0 0 0 5px
+      }
+
+      & .rating-salon__star {
+        width: 18px;
+        height: 18px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .records-applications__offer-contact {
+      margin-left: 35px;
+    }
+  }
+
+  .records-client__calendar {
+    margin-top: 60px;
+
+    .records-calendar__header {
+      position: relative;
+
+      margin-top: 10px;
+      padding-top: 25px;
+
+      border-top: 1px solid #e9e9eb;
+    }
+
+    .records-calendar__header::before {
+      position: absolute;
+      top: -3px;
+
+      content: '';
+      width: 100%;
+      height: 1px;
+
+      background-color: #e9e9eb;
+    }
+
+    .records-calendar__buttons {
+      padding-left: 25px;
+    }
+
+    .records-calendar__list {
+      padding-left: 25px;
+    }
+  }
+
+  .records-client__title {
+    display: block;
+
+    margin: 0;
+    padding: 0 25px;
+
+    font-size: 18px;
+  }
+
+  .records-client__courses,
+  .records-client__apparatus {
+    margin-top: 75px;
+  }
+
+  .records-client__courses-title,
+  .records-client__apparatus-title {
+    font-size: 18px;
+
+    padding: 0 25px;
+  }
+
+  .records-client__courses-item {
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 25px;
+  }
+
+  .records-client__course-title {
+    max-width: 185px;
+    min-width: 185px;
+
+    font-size: 16px;
+  }
+
+  .records-client__course-item {
+    width: 91px;
+
+    output {
+      font-size: 16px;
+
+      padding: 0 5px;
+    }
+  }
+
+  .records-client__apparatus-list {
+    display: flex;
+    align-items: center;
+
+    padding-top: 20px;
+  }
+
+  .records-client__apparatus-item {
+    margin: 20px 0 0 15px;
+    padding-left: 50px;
+
+    font-size: 16px;
+
+    &:first-child {
+      margin: 20px 0 0;
+    }
+
+    &::after {
+      left: 25px;
+    }
+  }
+}

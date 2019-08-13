@@ -1,0 +1,205 @@
+
+/*календарь*/
+.dtime {
+    width: 182px;
+    border: 1px solid #cbc6bf;
+    background: #fcfaf9;
+    display: none;
+    position: absolute;
+    text-indent: 0;
+    padding: 15px 3px 15px 3px;
+    margin: 0;
+    line-height: normal;
+    white-space: normal;
+    text-align: center;
+    z-index: 15;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.dtime table td{
+    color: #d3c4b2;
+}
+.dtime table th{
+    color: #505050;
+}
+
+.cont_ch {
+    display: inline-block;
+    font-size: 12px;
+    border: 0;
+    border-collapse: collapse;
+}
+.cont_ch th,.cont_ch td {
+    margin: 0;
+    padding: 1px;
+    border: 0;
+    font-weight: normal;
+}
+
+.d_con_ym {
+    width: 174px;
+    line-height: 20px;
+    height: 20px;
+    padding: 0 4px 3px 4px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.panmonth {
+    float: left;
+    width: 77px;
+    color: #56504f;
+    font-size: 12px;
+    padding: 1px 0 0 0;
+    margin-left: 14px;
+}
+.panyear {
+    float: right;
+    width: 54px;
+    color: #56504f;
+    font-size: 12px;
+    padding: 1px 0 0 0;
+    margin-right: 8px;
+}
+.g_back,.g_next {
+    float: left;
+    font-size: 20px;
+    cursor: pointer;
+    color: #d3c4b2;
+    margin-top: -1px;
+    font-weight: normal;
+}
+.g_next {
+    float: right;
+}
+.d_month-not-sel{
+    margin-right: 15px;
+}
+.d_month-not-sel,.d_year-not-sel{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+.d_year,.d_month {
+    visibility: hidden;
+    position: absolute;
+    z-index: 0;
+    font-size: 11px;
+    width: 65px;
+    vertical-align: middle;
+}
+.d_month {
+    margin-left: 2px;
+}
+
+.dt_button,.dt_time {
+    width: 182px;
+    margin: 8px 0 0 0;
+    display: inline-block;
+    text-align: center;
+}
+.dt_time {
+    border: none;
+}
+.cn_time,.cnn_time {
+    margin: 5px 0 0 0;
+    display: inline-block;
+    text-align: left;
+    font-size: 10px;
+}
+.rz_time {
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 5px 0 5px;
+}
+.d_hour,.d_minute {
+    text-align: center;
+    border: 1px solid #D8D8D8;
+    font-size: 11px;
+    width: 65px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.t_button {
+    text-align: center;
+    background: #F0F0F0;
+    border: 1px solid #D8D8D8;
+    padding: 5px;
+    font-size: 11px;
+    width: 55px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.c_button {
+    position: absolute;
+    z-index: 1;
+    top: -7px;
+    right: -7px;
+    line-height: 17px;
+    height: 17px;
+    width: 17px;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #9ca29b;
+    color: #9ca29b;
+    background: #fff;
+    border-radius: 360px;
+    cursor: pointer;
+}
+.c_button:hover {
+    color: #fff;
+    background: #ed6c44;
+    border: 1px solid #ed6c44;
+}
+
+.chd {
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    color: #505050;
+    font-size: 12px;
+    float: left;
+    margin: 1px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.pr_chd {
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    color: #909090;
+    font-size: 12px;
+    float: left;
+    margin: 1px;
+}
+.chd:hover {
+    background: #E0E0E0;
+}
+.d_chd {
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    margin: 1px;
+}
+.s_chd {
+    background: #E0E0E0;
+}
+.n_chd,.n_chd:hover {
+    background: #ed6c44;
+    color: #fff;
+}
+/*календарь*/

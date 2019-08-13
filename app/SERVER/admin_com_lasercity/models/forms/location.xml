@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_LOCATION"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="city"
+               type="dsql"
+               lang_column="title"
+               lang_object="citie"
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+        </field>
+
+        <!--<field name="district"
+               type="dsql"
+
+               update_onchange="city#getDistricts#true"
+               default_option="0#COM_LASERCITY_TABLE_DISTRICT"
+
+               lang_column="title"
+               lang_object="district"
+               label="COM_LASERCITY_TABLE_DISTRICT"
+               query="SELECT `id` FROM `#__lasercity_districts` WHERE `published`"
+               key_field="id"
+               value_field="value">
+        </field>-->
+
+        <field name="type"
+               type="list"
+               label="COM_LASERCITY_TABLE_TYPE_LOCATION">
+            <option value="street">COM_LASERCITY_TABLE_STREET</option>
+            <option value="boulevard">COM_LASERCITY_TABLE_BOULEVARD</option>
+            <option value="lane">COM_LASERCITY_TABLE_LANE</option>
+            <option value="prospectus">COM_LASERCITY_TABLE_PROSPECTUS</option>
+            <option value="area">COM_LASERCITY_TABLE_AREA</option>
+            <option value="embankment">COM_LASERCITY_TABLE_EMBANKMENT</option>
+            <option value="descent">COM_LASERCITY_TABLE_DESCENT</option>
+            <option value="line">COM_LASERCITY_TABLE_LINE</option>
+            <option value="highway">COM_LASERCITY_TABLE_HIGHWAY</option>
+            <option value="passage">COM_LASERCITY_TABLE_PASSAGE</option>
+            <option value="massive">COM_LASERCITY_TABLE_MASSIVE</option>
+        </field>
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

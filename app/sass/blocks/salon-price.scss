@@ -1,0 +1,239 @@
+.salon-price {
+  padding-bottom: 22px;
+}
+
+.salon-price__offer-for {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 8px;
+}
+
+.salon-price__offer-for-title {
+  font-size: 16px;
+}
+
+.salon-price__for-buttons {
+  display: flex;
+
+  margin: 13px 0 0;
+}
+
+.salon-price__for-button {
+  padding: 0;
+
+  background-color: transparent;
+
+  border: 0;
+
+  &--men {
+    margin-left: 35px;
+  }
+
+  span {
+    display: block;
+    width: 130px;
+    padding: 10px 0 10px 21px;
+
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: no-repeat;
+    background-position: 85px 50%;
+    background-size: 21px;
+
+    border-radius: 6px;
+  }
+
+  .women {
+    background-image: url('../img/woman.svg');
+  }
+
+  .men {
+    background-image: url('../img/man.svg');
+  }
+  
+  &--active {
+    .women {
+      background-color: #ffeff5;
+    }
+    
+    .men {
+      background-color: #cce9fb;
+    }
+  }
+}
+
+.salon-price__offer-list {
+  @include list-unstyled;
+  margin-top: 15px;
+}
+
+.salon-price__offer-item {
+  padding-bottom: 2px;
+
+  &--active {
+    .salon-price__offer-button {
+      transform: rotate(-180deg);
+    }
+
+    .salon-price__offer-zona-list {
+      display: block;
+    }
+  }
+}
+
+.salon-price__offer-header,
+.salon-price__offer-zona-header {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.salon-price__offer-header {
+  padding: 14px 0;
+}
+
+.salon-price__offer-zona-header {
+  padding: 8px 0 11px;
+}
+
+.salon-price__offer-title{
+  text-transform: uppercase;
+}
+
+.salon-price__offer-title,
+.salon-price__offer-zona-title {
+  max-width: 220px;
+  margin: 0;
+
+  text-align: center;
+  font-size: 16px;
+}
+
+.salon-price__offer-button,
+.salon-price__offer-zona-button {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+
+  width: 40px;
+  height: 10px;
+
+  background: url("../img/button-arrow.svg") no-repeat;
+
+  border: 0;
+}
+
+.salon-price__offer-zona-list {
+  display: none;
+
+  @include list-unstyled;
+}
+
+.salon-price__offer-zona-item {
+  margin-top: 2px;
+
+  &--active {
+
+    .salon-price__offer-zona-header {
+      border-bottom: 0;
+    }
+
+    .salon-price__offer-zona-button {
+      transform: rotate(-180deg);
+    }
+
+    .salon-price__offer-table {
+      display: table;
+    }
+  }
+}
+
+.salon-price__offer-table {
+  
+  &--women {
+    background-color: #ffeff5;
+
+    .salon-prices__table-tbody--women {
+      display: table-row-group;
+    }
+  }
+  
+  &--men {
+    background-color: #cce9fb;
+
+    .salon-prices__table-tbody--men {
+      display: table-row-group;
+    }
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .salon-price {
+    padding: 0;
+  }
+
+  .salon-price__offer-for {
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 20px;
+  }
+
+  .salon-price__for-buttons {
+    margin: 0 0 0 40px;
+  }
+
+  .salon-price__for-button {
+
+
+    &--men {
+      margin-left: 15px;
+    }
+
+    span {
+      width: 143px;
+
+      background-position: 110px 50%;
+    }
+  }
+
+  .salon-price__offer-list {
+    margin-top: 20px;
+  }
+
+  .salon-price__offer-header,
+  .salon-price__offer-zona-header {
+    border: 1px solid #d6d6d6;
+  }
+
+
+  .salon-price__offer-title,
+  .salon-price__offer-zona-title {
+    max-width: 900px;
+
+    font-size: 18px;
+  }
+
+  .salon-price__offer-zona-title {
+    font-weight: normal;
+  }
+
+  .salon-price__offer-button,
+  .salon-price__offer-zona-button {
+    right: 25px;
+  }
+
+  .salon-price__offer-table {
+    border: 1px solid #d6d6d6;
+    border-top: 0;
+  }
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_TABLE_BASIC_INFORMATION"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="logo"
+               type="media"
+               preview="true"
+               label="COM_LAVERCITY_TABLE_LOGOTYPE"
+        />
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="type"
+               type="languages"
+               label="COM_LASERCITY_TABLE_TYPE_SALON"
+               hint="COM_LASERCITY_TABLE_TYPE_SALON"
+               field="text"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               description="COM_LASERCITY_TABLE_REQUIRED"
+               field="text"
+               required="true"
+        />
+
+        <field name="mail"
+               type="text"
+               label="Mail"
+               field="text"
+        />
+
+        <field name="description"
+               type="languages"
+               label="COM_LASERCITY_TABLE_DESCRIPTION"
+               hint="COM_LASERCITY_TABLE_DESCRIPTION"
+               field="editor"
+        />
+    </fieldset>
+    <fieldset name="premium" label="COM_LASERCITY_TABLE_PREMIUM">
+        <field name="site"
+               type="text"
+               label="COM_LASERCITY_TABLE_SITE"
+               hint="COM_LASERCITY_TABLE_SITE"
+        />
+
+        <field name="social_networks"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LAVERCITY_TABLE_SOCIAL_NETWORKS">
+            <form>
+                <field name="url"
+                       type="text"
+                       label="URL"
+                       hint="url"
+                />
+            </form>
+        </field>
+    </fieldset>
+    <fieldset name="settings" label="COM_LASERCITY_TABLE_SETTINGS">
+        <field name="ordering"
+               type="text"
+               label="COM_LASERCITY_TABLE_ORDERING"
+               hint="COM_LASERCITY_TABLE_ORDERING"
+        />
+
+        <field name="premium"
+               type="list"
+               label="COM_LASERCITY_TABLE_PREMIUM"
+               class="chzn-color-state">
+            <option value="0">COM_LASERCITY_TABLE_PREMIUM_OFF</option>
+            <option value="1">COM_LASERCITY_TABLE_PREMIUM_ON</option>
+        </field>
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>
+
+        <!-- <field name="eeee"
+               type="dsql"
+               lang_column="title"
+               lang_object="citie"
+               id="test_dynamic_field"
+               to_change="sdsd"
+               task="getAll"
+               label="Тест:"
+               query="SELECT `id` FROM `#__lasercity_cities`"
+               field="text"
+               key_field="id"
+               value_field="value">
+        </field>
+        <field name="sdsd"
+               type="list"
+               label="Тестируеме"
+               filter="intval"
+               size="1"
+               default="1">
+            <option value="megatest">JPUBLISHED</option>
+        </field>-->

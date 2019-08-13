@@ -1,0 +1,63 @@
+.salon-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.salon-address__underground {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  margin: 3px 0 0;
+
+  font-size: 14px;
+
+  & svg {
+    margin: 0 5px 0 5px;
+  }
+}
+
+.salon-address__street {
+  display: flex;
+  align-items: center;
+
+  max-width: 275px;
+  min-height: 28px;
+  margin: 3px 0 0;
+  padding: 0 0 0 25px;
+
+  font-size: 12px;
+  color: #666666;
+
+  background: url('../img/place.svg') no-repeat 0 50%;
+
+  background-size: 24px;
+}
+
+@media(min-width: $desktop-width) {
+  .salon-address {
+    max-width: 360px;
+    min-height: 51px;
+    padding-left: 30px;
+
+    background: url('../img/place.svg') 0 50% no-repeat;
+    background-size: 31px;
+  }
+
+  .salon-address__underground {
+    margin: 0;
+  }
+  
+  .salon-address__street {
+    max-width: 385px;
+    min-height: unset;
+    margin: 0;
+    padding-left: 3px;
+
+    font-size: 14px;
+
+    background-image: none;
+  }
+}

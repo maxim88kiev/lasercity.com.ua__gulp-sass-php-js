@@ -1,0 +1,439 @@
+.record-client__nav {
+  padding: 12px 15px 0;
+
+  border-top: 2px solid #fce5ef;
+}
+
+.record-client {
+  margin-top: 28px;
+  padding: 20px 15px;
+
+  border-top: 1px solid #dedee0;
+  border-bottom: 1px solid #dedee0;
+}
+
+.record-client__salon {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  time {
+    display: flex;
+    align-items: center;
+
+    min-height: 24px;
+    padding-right: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    background: no-repeat 100% 50%;
+    background-size: 23px;
+  }
+
+  &--byaction {
+    time {
+      background-image: url(../img/discount--pink.svg);
+    }
+  }
+
+  &--bysalon {
+    time {
+      background-image: url(../img/salon--pink.svg);
+    }
+  }
+}
+
+.record-client__applications-salon-name {
+  margin-left: 10px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.record-client__salon-rating {
+  display: none;
+}
+
+.record-client__applications-salon-contact {
+  align-self: flex-end;
+
+  height: 31px;
+  width: 44px;
+  margin-left: 9px;
+
+  background: #dc025e url("../img/comment--white.svg") no-repeat 50% 50%;
+  background-size: 20px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  span {
+    display: none;
+  }
+}
+
+.record-client__salon-option {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-top: 8px;
+}
+
+.record-client__salon-option-noreview {
+  padding: 5px 12px;
+
+  font-size: 14px;
+  color: #717171;
+
+  background-color: #fff5f9;
+  border-radius: 8px;
+}
+
+.record-client__salon-option-review {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 12px;
+
+  font-size: 14px;
+  color: #717171;
+
+  background-color: #fff5f9;
+  border-radius: 8px;
+}
+
+.record-client__salon-point {
+  margin-left: 15px;
+
+  & .rating-salon__point {
+    color: #dc045f;
+  }
+
+  & .rating-salon-stars {
+    margin: 0 0 0 5px;
+  }
+}
+
+.record-client__salon-delete {
+  width: 42px;
+  height: 31px;
+  margin-left: 9px;
+  padding: 0;
+
+  background-image: url(../img/garbage--white.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+.record-client__salon-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 12px;
+}
+
+.record-client__salon-address {
+  display: flex;
+  align-items: center;
+
+  min-height: 23px;
+  margin: 0;
+  padding-left: 27px;
+
+  font-size: 13px;
+  color: #999999;
+
+  background: url("../img/place--pink.svg") no-repeat 0 0;
+  background-size: 23px;
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.record-client__salon-phone {
+  display: flex;
+  align-items: center;
+
+  min-height: 20px;
+
+  padding-left: 25px;
+  margin-top: 8px;
+
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+
+  background: url("../img/phone--pink.svg") no-repeat 0 50%;
+}
+
+.record-client__salon-map {
+  font-size: 14px;
+  color: #ff92b8;
+
+  background: url(../img/earth--pink.svg) right center no-repeat;;
+}
+
+.record-client__comment {
+  margin: 10px 0 0;
+  padding: 5px 0 0 25px;
+
+  color: #999999;
+  line-height: 15px;
+
+  background: url("../img/comment--pink.svg") no-repeat 0 0;
+  background-size: 20px;
+}
+
+.record-client__procedures {
+  @include list-unstyled;
+  margin-top: 17px;
+
+  border-top: 1px solid #dedee0;
+}
+
+.record-client__procedure {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 10px 25px 10px 0;
+
+  border-bottom: 1px solid #dedee0;
+
+  span {
+    line-height: 20px;
+  }
+}
+
+.record-client__topay-wrapper {
+  margin-top: 8px;
+}
+
+.record-client__wish-info {
+  margin-top: 22px;
+}
+
+.record-client__warning {
+  display: flex;
+  align-items: center;
+
+  min-height: 45px;
+  margin: 20px 0 0;
+  padding: 10px 10px 10px 45px;
+
+  font-size: 14px;
+  line-height: 15px;
+  color: #ff92b8;
+
+  background: url(../img/pay-attention.svg) no-repeat 5px 5px;
+  background-size: 31px;
+
+  border: 2px solid #ff92b8;
+}
+
+@media (min-width: $desktop-width) {
+  .record-client__wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .record-client__nav {
+    padding: 22px 15px 0;
+
+    border: 0;
+  }
+
+  .record-client {
+    padding: 20px 20px 32px;
+
+    border: 1px solid #dedee0;
+  }
+
+  .record-client__salon-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .record-client__salon {
+    time {
+      align-self: center;
+
+      padding-right: 42px;
+
+      background-size: 25px;
+    }
+  }
+
+  .record-client__applications-salon-name {
+    margin-left: 30px;
+
+    font-size: 15px;
+
+    background-size: 20px;
+  }
+
+  .record-client__salon-rating {
+    display: block;
+
+    margin-left: 40px;
+
+    & .rating-salon__point {
+      font-size: 21px;
+    }
+
+    & .rating-salon-stars {
+      margin: 0 0 0 5px
+    }
+
+    & .rating-salon__star {
+      width: 18px;
+      height: 18px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .record-client__applications-salon-contact {
+    margin-left: 85px;
+
+    &:hover {
+      width: 140px;
+      padding-left: 42px;
+
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      background-position-x: 12px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .record-client__salon-option {
+    margin: 0;
+  }
+
+  .record-client__salon-point {
+    margin-left: 7px;
+
+    .rating-salon__point {
+      font-size: 21px;
+    }
+
+    & .rating-salon__star {
+      width: 18px;
+      height: 18px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .record-client__salon-delete {
+    margin-left: 17px;
+
+    width: 55px;
+  }
+
+  .record-client__info-wrapper {
+    padding: 0 135px 0 100px;
+  }
+
+  .record-client__salon-info {
+    justify-content: flex-start;
+  }
+
+  .record-client__salon-address {
+    order: 1;
+
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .record-client__salon-phone {
+    order: 3;
+
+    margin: 0 0 0 38px;
+  }
+
+  .record-client__salon-map {
+    order: 2;
+
+    margin-left: 75px;
+  }
+
+  .record-client__comment {
+    display: flex;
+    align-items: center;
+
+    min-height: 20px;
+    margin: 12px 0 0;
+    padding: 0 0 0 27px;
+
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .record-client__procedure {
+
+    span {
+      width: 25%;
+    }
+
+    span {
+      padding: 0 5px;
+    }
+  }
+
+  .record-client__procedure-time {
+    order: 2;
+  }
+
+  .record-client__procedure-zona {
+    order: 1;
+  }
+
+  .record-client__procedure-price {
+    order: 4;
+
+    text-align: center;
+  }
+
+  .record-client__procedure-apparatus {
+    order: 3;
+  }
+
+  .record-client__topay-wrapper {
+    justify-content: flex-end;
+
+    margin-top: 15px;
+  }
+
+  .record-client__warning {
+    margin: 30px 0 0;
+    padding: 15px 10px 15px 80px;
+
+    background-position-x: 23px;
+
+    border-width: 1px;
+  }
+}

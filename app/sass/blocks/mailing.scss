@@ -1,0 +1,187 @@
+.mailing {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2px;
+  padding: 15px;
+
+  background-color: #f8f8f8;
+}
+
+.mailing__slogan {
+  align-self: center;
+
+  margin-left: 5px;
+
+  font-size: 14px;
+}
+
+.mailing__subscription {
+  display: none;
+}
+
+.mailing__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.mailing__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+}
+
+.mailing__input {
+  width: 225px;
+  padding: 12px 15px;
+
+  font-size: 16px;
+  color: #000000;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+
+  &:focus {
+    outline: none;
+
+    border-color: #fc2a82;
+  }
+}
+
+.mailing__rules {
+  display: none;
+}
+
+.mailing__button {
+  align-self: flex-start;
+
+  margin-left: 5px;
+  padding: 12px 15px;
+
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-color: #6b6b6b;
+
+  border: 0;
+  border-radius: 6px;
+
+  & .mailing__button--pc {
+    display: none;
+  }
+
+  &:hover {
+    background-color: #fc2a82;
+  }
+}
+
+.mailing__followers {
+  display: none;
+}
+
+@media(min-width: $desktop-width) {
+  .mailing {
+    max-width: 262px;
+    padding: 0;
+
+    background-color: #ffffff;
+
+    border: 1px solid #d6d6d6;
+  }
+
+  .mailing__slogan {
+    width: 100%;
+    margin: 0;
+    padding: 18px 0 18px 35px;
+
+    font-size: 15px;
+    text-align: center;
+
+    background: #fce5ef url('../img/mail.svg') 10px 50% no-repeat;
+
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  .mailing__subscription {
+    display: block;
+
+    margin: 22px 0 0 0;
+
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+  }
+
+  .mailing__form {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .mailing__rules {
+    display: block;
+
+    margin: 14px 0 0;
+
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+
+    & a {
+      color: #000000;
+
+      font-weight: bold;
+    }
+  }
+
+  .mailing__button {
+    align-self: unset;
+
+    margin: 15px 0 0 0;
+
+    font-weight: normal;
+    text-transform: none;
+
+    & .mailing__button--mob {
+      display: none;
+    }
+
+    & .mailing__button--pc {
+      display: block;
+    }
+  }
+
+  .mailing__followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+    padding-bottom: 10px;
+
+    background-color: #fff3f8;
+
+    & output {
+      margin-top: 17px;
+
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .mailing__followers-accept {
+    margin: 5px 0 0 0;
+
+    padding: 0 40px;
+
+    text-align: center;
+    font-size: 17px;
+    color: #333333;
+  }
+}

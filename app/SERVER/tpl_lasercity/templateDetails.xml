@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>lasercity</name>
+	<version>1.0</version>
+	<creationDate>12.02.2019</creationDate>
+	<author>Kreng Coder</author>
+	<authorEmail>ihor.lischuk@gmail.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>TPL_LASERCITY_DESCRIPTION</description>
+	<files>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>debug</position>
+		<position>header</position>
+		<position>footer</position>
+	</positions>
+</extension>

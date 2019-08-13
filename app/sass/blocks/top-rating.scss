@@ -1,0 +1,46 @@
+.top-rating {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+}
+
+.top-rating__text {
+  align-self: center;
+
+  margin: 5px 0 0;
+  padding: 0 50px;
+
+  text-align: center;
+  font-size: 15px;
+}
+
+.top-rating__slider {
+  margin-top: 20px;
+}
+
+@media(min-width: $desktop-width) {
+  .top-rating {
+    order: 2;
+
+    margin-top: 45px;
+  }
+
+  .top-rating__title {
+    font-size: 30px;
+  }
+
+  .top-rating__text {
+    padding: 0;
+    
+    font-size: 18px;
+  }
+
+  .top-rating__slider {
+    margin-top: 65px;
+  }
+
+  .slider__list-rating {
+    margin-top: 25px;
+  }
+}

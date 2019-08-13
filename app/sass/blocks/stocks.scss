@@ -1,0 +1,36 @@
+.stocks__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.stocks__slider {
+  .slider__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    overflow: unset;
+    overflow-x: unset;
+    -ms-overflow-style: unset;
+    scrollbar-width: unset;
+  }
+
+  .slider__item {
+    margin-top: 25px;
+  }
+
+  .slider__button {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .stocks {
+    .salons__show-all-wrapper {
+      margin-top: 50px;
+    }
+  }
+
+  .stocks__pagination {
+    margin-top: 45px;
+  }
+}

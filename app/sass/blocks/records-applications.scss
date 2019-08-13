@@ -1,0 +1,326 @@
+.records-applications {
+  border-top: 1px solid #dedee0;
+  border-bottom: 1px solid #dedee0;
+}
+
+.records-applications__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include list-unstyled;
+  margin-top: 1px;
+  padding: 3px 15px 8px;
+
+  border-top: 1px solid #dedee0;
+  border-bottom: 1px solid #dedee0;
+}
+
+.records-applications__item {
+  position: relative;
+
+  width: 138px;
+  margin-top: 5px;
+  padding: 6px 0;
+
+  text-align: center;
+
+  border: 1px solid #fff5f9;
+  border-radius: 10px;
+
+  &--current {
+    font-weight: bold;
+
+    background-color: #fff5f9;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  output {
+    position: absolute;
+    left: 50%;
+    top: -21px;
+    transform: translate(-50%, 0);
+
+    min-width: 25px;
+    min-height: 25px;
+    padding: 5px;
+
+    color: #ffffff;
+    font-weight: normal;
+
+    background-color: #e40061;
+
+    border-radius: 50%;
+  }
+}
+
+.records-applications__offers {
+  @include list-unstyled;
+  margin-top: 1px;
+}
+
+.records-applications__offer {
+  display: flex;
+
+  padding: 12px 15px 8px;
+
+  border-top: 1px solid #dedee0;
+
+  a {
+    display: flex;
+
+    text-decoration: none;
+    font-size: 15px;
+    color: #000000;
+  }
+
+  time {
+    display: flex;
+    align-items: center;
+
+    min-height: 24px;
+    padding-right: 30px;
+
+    background: no-repeat 100% 50%;
+    background-size: 23px;
+  }
+
+  &--byaction {
+    time {
+      background-image: url(../img/discount--pink.svg);
+    }
+  }
+
+  &--bysalon {
+    time {
+      background-image: url(../img/salon--pink.svg);
+    }
+  }
+}
+
+.records-applications__offers--held {
+  .records-applications__offer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.records-applications__offer-link {
+  display: flex;
+}
+
+.records-applications__offer-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 0 0 30px;
+}
+
+.records-applications__offer-number {
+  display: flex;
+  align-items: center;
+
+  min-height: 20px;
+
+  padding-left: 25px;
+  margin-top: 8px;
+
+  background: url("../img/phone--pink.svg") no-repeat 0 50%;
+}
+
+.records-applications__offer-contact {
+  align-self: flex-end;
+
+  height: 31px;
+  width: 44px;
+  margin-left: 27px;
+
+  background: #dc025e url("../img/comment--white.svg") no-repeat 50% 50%;
+  background-size: 20px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  span {
+    display: none;
+  }
+}
+
+.records-applications__option {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.records-applications__option-noreview {
+  padding: 5px 12px;
+
+  font-size: 14px;
+  color: #717171;
+
+  background-color: #fff5f9;
+  border-radius: 8px;
+}
+
+.records-applications__option-review {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 12px;
+
+  font-size: 14px;
+  color: #717171;
+
+  background-color: #fff5f9;
+  border-radius: 8px;
+}
+
+.records-applications__point {
+  margin-left: 15px;
+
+  .rating-salon__point {
+    color: #de0762;
+  }
+
+  & .rating-salon-stars {
+    margin: 0 0 0 5px;
+  }
+}
+
+.records-applications__salon-delete {
+  width: 42px;
+  height: 31px;
+  margin-left: 9px;
+  padding: 0;
+
+  background-image: url(../img/garbage--white.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+
+@media (min-width: $desktop-width) {
+  .records-applications__list {
+    justify-content: flex-start;
+  }
+
+  .records-applications__item {
+    width: 162px;
+    padding: 12px 0;
+
+    font-size: 16px;
+
+    border: 0;
+
+    output {
+      min-width: 28px;
+      min-height: 27px;
+      padding: 5px 6px;
+
+      font-size: 14px;
+    }
+  }
+
+  .records-applications__offers--held {
+    .records-applications__offer {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .records-applications__offer {
+    padding: 12px 15px;
+
+    time {
+      min-height: 26px;
+      padding-right: 42px;
+
+      font-size: 15px;
+
+      background-size: 25px;
+    }
+  }
+
+  .records-applications__offer-wrapper {
+    flex-direction: row;
+
+    margin: 0;
+
+    font-size: 15px;
+  }
+
+  .records-applications__offer-name {
+    display: flex;
+    align-items: center;
+
+    margin-left: 40px;
+  }
+
+  .records-applications__offer-number {
+    margin: 0 0 0 82px;
+    padding-left: 30px;
+
+    font-size: 15px;
+
+    background-size: 22px;
+  }
+
+  .records-applications__salon-option {
+    margin: 0;
+  }
+
+  .records-applications__offer-contact {
+    margin-left: 35px;
+
+    &:hover {
+      width: 180px;
+      padding-left: 42px;
+
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      background-position-x: 12px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .records-applications__option {
+    margin: 0;
+  }
+
+  .records-applications__option-review {
+    margin-left: 7px;
+
+    .rating-salon__point {
+      font-size: 21px;
+    }
+
+    & .rating-salon__star {
+      width: 18px;
+      height: 18px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .records-applications__salon-delete {
+    margin-left: 17px;
+
+    width: 55px;
+  }
+}

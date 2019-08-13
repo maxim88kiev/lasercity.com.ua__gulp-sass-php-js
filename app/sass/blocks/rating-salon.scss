@@ -1,0 +1,55 @@
+.rating-salon {
+  display: flex;
+  justify-content: space-between;
+
+  text-decoration: none;
+  
+  &:hover {
+    .rating-salon__star--silver {
+      svg {
+        fill: #dc025e;
+      }
+    }
+    
+    .rating-salon__reviews {
+      color: #fc2a82;
+    }
+  }
+}
+
+.rating-salon__point-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rating-salon__point {
+  font-size: 18px;
+  color: #dc025e;
+  font-weight: 700;
+}
+
+.rating-salon-stars {
+  display: flex;
+
+
+  @include list-unstyled;
+  margin-left: 10px;
+}
+
+.rating-salon__star {
+  height: 15px;
+  margin-left: 2px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.rating-salon__reviews {
+  align-self: center;
+
+  margin: 0;
+
+  color: #6f6f6f;
+  text-decoration: none;
+}

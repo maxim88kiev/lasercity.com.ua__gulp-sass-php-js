@@ -1,0 +1,30 @@
+@import "variables/width";
+@import "mixins/general";
+
+
+@import "blocks/articles/article.scss";
+
+
+@import "blocks/articles/complete-list.scss";
+@import "blocks/articles/article-link.scss";
+@import "blocks/articles/article-warning.scss";
+@import "blocks/articles/article-beforeafter.scss";
+
+
+@import "blocks/articles/introduce-similitude.scss";
+@import "blocks/articles/introduce-apparatus.scss";
+
+
+@import "blocks/articles/article-advantages.scss";
+@import "blocks/articles/articles-topthings.scss";
+@import "blocks/articles/articles-reviews.scss";
+@import "blocks/articles/article-totals.scss";
+@import "blocks/articles/article-methods.scss";
+@import "blocks/articles/article-texts.scss";
+@import "blocks/articles/article-columns.scss";
+@import "blocks/articles/article-contraindications.scss";
+@import "blocks/articles/article-table.scss";
+@import "blocks/articles/article-applying.scss";
+@import "blocks/articles/article-results.scss";
+@import "blocks/articles/article-benefits.scss";
+@import "blocks/articles/article-specifications.scss";

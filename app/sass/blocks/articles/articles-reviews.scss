@@ -1,0 +1,158 @@
+.articles-reviews {
+  margin: 35px 0 40px;
+}
+
+.articles-reviews__title {
+  font-size: 14px;
+}
+
+.articles-reviews__text {
+  margin: 15px 0 0;
+  padding: 0 15px;
+
+  line-height: 15px;
+  color: #333333;
+}
+
+.articles-reviews__list {
+  @include list-unstyled;
+  margin: 20px 0 0;
+  padding: 0 15px;
+}
+
+.articles-reviews__list-item {
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.articles-reviews__quote {
+  margin: 0;
+
+  cite {
+    margin: 12px 0 0 5px;
+
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.articles-reviews__author-img-wrapper {
+  flex-shrink: 0;
+
+  margin: 0;
+
+  img {
+    border-radius: 50%;
+    border: 3px solid #e20864;
+  }
+}
+
+.articles-reviews__author-wrapper {
+  display: flex;
+}
+
+.articles-reviews__author-text {
+  position: relative;
+
+  margin: 5px 0 0;
+  padding: 9px;
+
+  font-style: italic;
+  font-size: 11px;
+  line-height: 13px;
+  color: #333333;
+
+  background-color: #fff4f9;
+
+  border-radius: 10px;
+
+  &:first-letter {
+    margin-left: 10px;
+  }
+
+  &:before {
+    position: absolute;
+    left: 60px;
+    top: -14px;
+
+    content: '';
+    width: 21px;
+    height: 19px;
+
+    background: url("../img/comment-triangle.svg") no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .articles-reviews {
+    margin: 30px 0;
+  }
+
+  .articles-reviews__title {
+    font-size: 21px;
+  }
+
+  .articles-reviews__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .articles-reviews__text {
+    font-size: 16px;
+    line-height: 21px;
+
+    &:first-letter {
+      margin-left: 10px;
+    }
+  }
+
+  .articles-reviews__list {
+    margin-top: 25px;
+  }
+
+  .articles-reviews__list-item {
+    position: relative;
+
+    margin-top: 30px;
+  }
+
+  .articles-reviews__quote {
+    display: flex;
+
+    cite {
+      z-index: 1;
+      position: absolute;
+      left: 188px;
+      top: 7px;
+
+      font-size: 16px;
+    }
+  }
+
+  .articles-reviews__author-wrapper {
+    flex-shrink: 0;
+  }
+
+  .articles-reviews__author-text {
+    align-self: flex-start;
+
+    margin-left: 53px;
+    padding: 35px 30px 12px 27px;
+
+
+    font-size: 16px;
+    line-height: 21px;
+
+    &:before {
+      top: 23px;
+      left: -20px;
+      transform: rotate(-95deg);
+
+      width: 28px;
+      height: 29px;
+    }
+  }
+}

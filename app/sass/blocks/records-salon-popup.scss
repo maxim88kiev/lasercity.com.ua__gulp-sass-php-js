@@ -1,0 +1,76 @@
+body[data-current-value="recordsSalonPopup"] {
+  .records-salon-popup {
+    display: block;
+
+    .popup-place {
+      display: block;
+    }
+  }
+}
+
+.records-salon-popup {
+  .multi-popup__popups-wrapper {
+    top: 40px;
+  }
+
+  .popup-place__areas-header {
+    padding: 10px 15px 10px 10px
+  }
+
+  .popup-place__microareas-item {
+    .record-salon-popup__client-count {
+      margin-left: 5px;
+    }
+  }
+}
+
+.records-salon-popup__client-count {
+  margin: 0 5px;
+  padding: 2px 5px;
+
+  color: #ffffff;
+
+  background-color: #dc025e;
+
+  border-radius: 4px;
+}
+
+.records-salon-popup__street {
+  font-size: 11px;
+}
+
+@media (min-width: $desktop-width) {
+  .records-salon-popup {
+    .multi-popup__navigation-popup {
+      justify-content: flex-start;
+
+      padding-left: 50px;
+    }
+
+    .multi-popup__navigation-popup-title {
+      display: block;
+    }
+
+    .multi-popup__navigation-popup-close {
+      top: 15px;
+    }
+
+    .popup-place__location-wrapper {
+      margin-top: 18px;
+    }
+
+    .popup-place__areas-header {
+      padding: 10px 15px 10px 20px;
+    }
+
+    .popup-place__microareas-item {
+      .record-salon-popup__client-count {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .records-salon-popup__street {
+    font-size: 12px;
+  }
+}

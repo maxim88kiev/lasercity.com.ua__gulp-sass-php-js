@@ -1,0 +1,103 @@
+.gm-style-iw {
+  width: 242px;
+  border-top: 4px solid #dc025e;
+  border-radius: 0 !important;
+}
+
+.point-popup__title {
+  margin: 7px 0 0;
+
+  font-size: 18px;
+
+  & a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: #dc025e;
+  }
+}
+
+.point-popup__description {
+  display: none;
+}
+
+.point-popup__address {
+  min-height: 51px;
+  margin: 0;
+  padding-left: 37px;
+
+  background: url(../img/place.svg) no-repeat 0 50%;
+  background-size: 36px;
+
+  & .salon-address__street {
+    padding-left: 5px;
+
+    color: #000000;
+    
+    background-image: none;
+  }
+}
+
+.point-popup__services-list {
+  margin-top: 5px;
+}
+
+.point-popup__rating {
+  margin-top: 10px;
+}
+
+@media (min-width: $desktop-width) {
+  .gm-style-iw {
+    width: 362px;
+  }
+
+  .point-popup__header {
+    display: flex;
+  }
+
+  .point-popup__img {
+    border: 1px solid #cccccc;
+  }
+
+  .point-popup__title-wrapper {
+    margin-left: 18px;
+  }
+
+  .point-popup__title {
+    margin: 0;
+  }
+
+  .point-popup__description {
+    display: block;
+
+    margin: 10px 0 0;
+
+    color: #666666;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .point-popup__address {
+    margin-top: 10px;
+    padding-left: 41px;
+
+    background-size: 41px;
+  }
+
+  .point-popup__advantage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .point-popup__rating {
+    order: -1;
+
+    justify-content: flex-start;
+
+    & .rating-salon__reviews {
+      margin-left: 10px;
+    }
+  }
+}

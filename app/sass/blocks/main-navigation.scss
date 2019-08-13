@@ -1,0 +1,245 @@
+.main-navigation__list-wrapper {
+  z-index: 700;
+
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  border-top: 3px solid #ff7eb6;
+}
+
+.main-navigation__list {
+  display: flex;
+  flex-basis: 290px;
+
+  @include list-unstyled;
+}
+
+.main-navigation__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 57px;
+  height: 58px;
+  padding: 7px 0 6px;
+
+  font-size: 11px;
+  color: #6b6b6b;
+  text-decoration: none;
+
+
+  background: 50% 7px no-repeat;
+
+  &[href]:hover {
+    background-color: #ff7eb5;
+    color: #000000;
+
+    & svg {
+      fill: #ffffff;
+    }
+  }
+
+  &--articles {
+    .pc {
+      display: none;
+    }
+  }
+
+  &--faq {
+    .pc {
+      display: none;
+    }
+  }
+
+  &--sale {
+    display: none;
+  }
+}
+
+.main-navigation__search-from {
+  display: none;
+  z-index: 800;
+
+  position: absolute;
+  top: 45px;
+
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+
+  background-color: #ffffff;
+
+  &--active {
+    display: block;
+  }
+}
+
+.main-navigation__search {
+  width: 100%;
+
+  margin-top: 35px;
+  padding: 12px 17px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  border: 3px solid #dc025e;
+  border-radius: 10px;
+}
+
+.main-navigation__search-autocomplete {
+  width: 90%;
+}
+
+.main-navigation__search-button-closed {
+  top: 10px;
+  right: 10px;
+
+  width: 23px;
+  height: 21px;
+
+
+  &::before,
+  &::after {
+    width: 22px;
+    height: 3px;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .main-navigation {
+    background-color: #dc025e;
+  }
+
+  .main-navigation__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1170px;
+    margin: 10px auto 0;
+    padding: 0 15px;
+  }
+
+  .main-navigation__list-wrapper {
+    z-index: unset;
+
+    position: static;
+
+    justify-content: unset;
+
+    padding: 0 15px;
+
+    background-color: unset;
+
+    border-top: 0;
+  }
+
+  .main-navigation__list {
+    width: 100%;
+    flex-basis: unset;
+
+    justify-content: space-between;
+  }
+
+  .main-navigation__item {
+    width: 25%;
+  }
+
+  .main-navigation__link {
+    justify-content: center;
+
+    width: unset;
+    height: unset;
+    padding-top: 6px;
+
+    font-size: 18px;
+    color: #ffffff;
+
+    &[href]:hover {
+      background-color: #fc2a82;
+      color: #ffffff;
+    }
+
+    &--salons,
+    &--articles,
+    &--faq {
+      svg {
+        display: none;
+      }
+    }
+
+    &--articles,
+    &--faq {
+      .pc {
+        display: block;
+      }
+
+      .mob {
+        display: none;
+      }
+    }
+
+    &--sale {
+      display: flex;
+    }
+  }
+
+  .main-navigation__search-from {
+    position: static;
+    top: unset;
+
+    display: block;
+
+    min-width: 320px;
+    width: 320px;
+    height: unset;
+    padding: 0;
+
+    border-radius: 10px;
+  }
+
+  .main-navigation__search {
+    margin: 0;
+    padding: 4px 30px 4px 17px;
+
+    font-size: 13px;
+    font-weight: normal;
+
+    background: #ffffff url('../img/nav-search.svg') 96% 50% no-repeat;
+    background-size: 18px;
+
+    border: 0;
+    border-radius: 10px;
+
+    &:focus {
+      background-color: #ffeff6;
+
+      outline: none;
+    }
+  }
+
+  .main-navigation__search-autocomplete {
+    top: 3px;
+
+    width: 100%;
+
+    box-shadow: 0 19px 25px #444;
+
+    & .autocomplete__list {
+      margin-top: 5px;
+    }
+  }
+
+  .main-navigation__search-button-closed {
+    display: none;
+  }
+}

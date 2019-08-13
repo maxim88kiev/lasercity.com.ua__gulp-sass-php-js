@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_METRO"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="city"
+               type="dsql"
+
+               lang_column="title"
+               lang_object="citie"
+
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+        </field>
+
+        <field name="district"
+               type="dsql"
+
+               update_onchange="city#getDistricts#true"
+               default_option="0#COM_LAVERCITY_TABLE_NOT_SPECIFIED"
+
+               lang_column="title"
+               lang_object="district"
+
+               label="COM_LASERCITY_TABLE_DISTRICT"
+               query="SELECT `id` FROM `#__lasercity_districts` WHERE `published`"
+               key_field="id"
+               value_field="value">
+        </field>
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="line"
+               type="list"
+               label="COM_LASERCITY_TABLE_LINE">
+            <option value="">COM_LASERCITY_TABLE_METRO_LINE</option>
+            <option value="red">COM_LASERCITY_TABLE_LINE_RED</option>
+            <option value="green">COM_LASERCITY_TABLE_LINE_GREEN</option>
+            <option value="blue">COM_LASERCITY_TABLE_LINE_BLUE</option>
+        </field>
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

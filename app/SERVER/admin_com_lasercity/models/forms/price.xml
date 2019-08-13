@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_PRICE"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="sex"
+               type="list"
+               label="Прайс для">
+            <option value="0">Женчин</option>
+            <option value="1">Мужчин</option>
+        </field>
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="apparat"
+               type="sql"
+               label="COM_LASERCITY_TABLE_APPARAT"
+               query="SELECT `id`, `title` FROM `#__lasercity_apparats` WHERE `published`"
+               key_field="id"
+               value_field="title">
+        </field>
+
+        <field name="data"
+               type="subform"
+               layout = "joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_PRICE_DATA"
+        >
+            <form>
+                <field name="service"
+                       type="dsql"
+                       lang_column="title"
+                       lang_object="service"
+                       label="COM_LASERCITY_TABLE_SERVICE"
+                       query="SELECT `id` FROM `#__lasercity_services` WHERE `published`"
+                       key_field="id"
+                       value_field="value">
+                </field>
+                <field name="duration" type="text" label="COM_LASERCITY_TABLE_DURATION" hint="COM_LASERCITY_TABLE_DURATION"/>
+                <field name="price" type="text" label="COM_LASERCITY_TABLE_PRICE" hint="COM_LASERCITY_TABLE_PRICE"/>
+                <field name="percent" type="text" label="COM_LASERCITY_TABLE_PRICE_SALE" hint="COM_LASERCITY_TABLE_PRICE_SALE"/>
+                <field name="start_sale" type="calendar" class="width100px" label="COM_LASERCITY_TABLE_START_SALE" hint="COM_LASERCITY_TABLE_START_SALE"/>
+                <field name="end_sale" type="calendar" class="width100px" label="COM_LASERCITY_TABLE_END_SALE" hint="COM_LASERCITY_TABLE_END_SALE"/>
+            </form>
+        </field>
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

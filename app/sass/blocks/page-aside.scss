@@ -1,0 +1,21 @@
+.salon-aside {
+  margin-top: 45px;
+}
+
+.faq-aside {
+  margin-top: 62px;
+}
+
+@media(min-width: $desktop-width) {
+  .index-aside {
+    display: none;
+  }
+  
+  .salon-aside {
+    display: none;
+  }
+
+  .faq-aside {
+    display: none;
+  }
+}

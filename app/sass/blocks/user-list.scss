@@ -1,0 +1,173 @@
+.user-list {
+  z-index: 701;
+
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+
+  display: flex;
+
+  @include list-unstyled;
+  margin-left: 25px;
+}
+
+.user-list__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 57px;
+  height: 58px;
+  padding: 7px 0 6px;
+
+  font-size: 11px;
+  color: #6b6b6b;
+  text-decoration: none;
+
+  background: transparent;
+
+  border: 0;
+
+  &:hover {
+    background-color: #ff7eb5;
+    color: #000000;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+.user-list__link--basket {
+  position: relative;
+
+  & .items {
+    position: absolute;
+    top: 12px;
+    right: 11px;
+
+    .items-count {
+      position: absolute;
+      top: 3px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      font-size: 8px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    & svg {
+      fill: #dc025e;
+    }
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .user-list {
+    position: static;
+
+    margin: 0;
+  }
+
+  .user-list__item {
+    //margin-left: 55px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .user-list__link {
+    justify-content: center;
+
+    width: unset;
+    min-width: 80px;
+    height: 68px;
+    padding: 0;
+
+    font-size: 18px;
+    color: #000000;
+
+    svg {
+      fill: #000000;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+
+      svg {
+        fill: #000000;
+      }
+    }
+  }
+
+  .user-list__link--basket {
+    font-size: 0;
+
+    & .basket {
+      width: 32px;
+      height: 34px;
+    }
+
+    & .items {
+      top: 23px;
+      right: 18px;
+
+      & .heart {
+        width: 23px;
+        height: 20px;
+      }
+
+      .items-count {
+        top: 2px;
+
+        font-size: 10px;
+      }
+    }
+
+    &:hover {
+      .basket {
+        transition: 0.3s;
+
+        width: 30px;
+        height: 34px;
+      }
+
+      .items {
+        .heart {
+          transition: 0.3s;
+
+          width: 21px;
+          height: 18px;
+
+          fill: #dc025e;
+        }
+
+        .items-count {
+          top: 2px;
+
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  .user-list__link--login {
+    flex-direction: row;
+
+    & svg {
+      width: 28px;
+      height: 32px;
+    }
+
+    &:hover {
+      & svg {
+        transition: 0.3s;
+        width: 26px;
+        height: 30px;
+      }
+    }
+  }
+}

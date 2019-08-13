@@ -1,0 +1,161 @@
+.popup-aparat {
+  display: none;
+
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+body[data-current-value = "multiPopupAparat"] {
+  .multi-popup {
+    display: block;
+  }
+  .popup-aparat {
+    display: block;
+  }
+}
+
+.popup-aparat__title {
+  display: none;
+}
+
+.popup-aparat__list {
+  @include list_unstyled;
+}
+
+.popup-aparat__item-kind {
+  margin-top: 8px;
+
+  &--active {
+    .popup-aparat__kind-title::before {
+      position: absolute;
+      top: 30%;
+      left: 10px;
+    
+      content: "";
+    
+      width: 7px;
+      height: 7px;
+    
+      background-color: #ffccff;
+      border-radius: 50%;
+    }
+
+    & .popup-aparat__kind-button {
+      transform: rotate(-135deg);
+    }
+
+    & .popup-aparat__kind-list {
+      display: block;
+    }
+  }
+}
+
+.popup-aparat__kind-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 15px 5px 0;
+  
+  border-bottom: 1px solid #fef2f7;
+}
+
+.popup-aparat__kind-title {
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  padding-left: 25px;
+
+  font-size: 15px;
+}
+
+.popup-aparat__kind-button {
+  border-color: #999999;
+}
+
+.popup-aparat__kind-list {
+  display: none;
+
+  @include list_unstyled;
+
+  font-size: 12px;
+}
+
+.popup-aparat__kind-item {
+  padding: 10px 30px;
+
+  border-bottom: 1px solid #fef2f7;
+}
+
+@media(min-width: $desktop-width) {
+  .popup-aparat {
+    padding: 0;
+    margin: 0;
+  }
+
+  .popup-aparat__title {
+    display: block;
+
+    margin: 0;
+    padding: 0 0 10px 30px;
+
+    font-size: 22px;
+  }
+
+  .popup-aparat__item-kind {
+    display: flex;
+    align-items: flex-start;
+
+    margin-top: 0;
+
+    &--active {
+      & .popup-aparat__kind-header {
+        background-color: #fef2f7;
+      }
+  
+      & .kind__button {
+        transform: rotate(-45deg);
+      }
+  
+      & .popup-aparat__kind-list {
+        background-color: #fef2f7;
+      }
+    }
+  }
+
+  .popup-aparat__kind-header {
+    min-width: 250px;
+    padding: 10px 15px 10px 35px;
+
+    border-bottom: 0;
+  }
+
+  .popup-aparat__kind-title {
+    padding: 0;
+
+    font-size: 18px;
+    color: #666666;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .popup-aparat__kind-button {
+    transform: rotate(-45deg);
+  }
+
+  .popup-aparat__kind-list {
+    width: 100%;
+
+    background-color: #fef2f7;
+  }
+
+  .popup-aparat__kind-item {
+    border-bottom: 0;
+
+    font-size: 16px;
+    color: #666666;
+  }
+}

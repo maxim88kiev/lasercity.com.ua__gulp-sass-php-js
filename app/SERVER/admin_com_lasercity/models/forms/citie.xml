@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_CITY"
+              description="COM_LASERCITY_NOTIFICATION_CITY"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="lat"
+               type="text"
+               label="Lat"
+               hint="Lat"
+        />
+
+        <field name="lng"
+               type="text"
+               label="Lng"
+               hint="Lng"
+        />
+
+        <field name="index"
+               type="text"
+               label="Index"
+               hint="Index"
+        />
+
+        <!--<field name="default_language"
+               type="sql"
+               label="COM_LAVERCITY_TABLE_DEFAULT_LANGUAGE"
+               query="SELECT `lang_code`, `title_native` FROM `#__languages` WHERE `published`"
+               key_field="lang_code"
+               value_field="title_native">
+        </field>-->
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               description=""
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

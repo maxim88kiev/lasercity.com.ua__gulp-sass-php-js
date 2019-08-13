@@ -1,0 +1,80 @@
+.salon-carousel__section {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.salon-carousel {
+  margin-top: 35px;
+}
+
+.salon-carousel__buttons {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+}
+
+.salon-carousel__button {
+  width: 50%;
+  padding: 13px 0;
+
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #f1f1f1;
+
+  border: 0;
+
+  span {
+    position: relative;
+  }
+
+  output {
+    position: absolute;
+    top: -32px;
+    right: -32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 35px;
+    min-width: 35px;
+
+    padding: 5px;
+
+    color: #ffffff;
+
+    background-color: #de005e;
+    border: 1px solid #de005e;
+    border-radius: 50%;
+  }
+
+  &--active {
+    color: #ffffff;
+
+    background-color: #de005e;
+
+    output {
+      color: #de005e;
+
+      background-color: #ffffff;
+
+      border-color: #de005e;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .salon-carousel {
+    max-width: 1170px;
+    min-width: 1170px;
+    margin: 60px auto 0;
+    padding-bottom: 60px;
+  }
+}

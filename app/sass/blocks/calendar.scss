@@ -1,0 +1,89 @@
+.calendar {
+  display: none;
+  flex-direction: column;
+
+  width: 211px;
+  padding: 10px 3px 19px;
+
+  background-color: #fff5f9;
+  box-shadow: 0 10px 20px rgba(0,0,0,.5)
+}
+
+.calendar--active {
+  display: flex;
+}
+
+.calendar__output {
+  padding-bottom: 4px;
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+
+  border-bottom: 1px solid #ffffff;
+}
+
+.calendar__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 10px 30px 4px;
+
+  font-weight: bold;
+
+  border-bottom: 1px solid #ffffff;
+  select {
+    background-color: transparent;
+
+    border: 0;
+  }
+}
+
+.calendar__table {
+  align-self: center;
+
+  margin-top: 12px;
+
+  border-collapse: separate;
+  border-spacing: 5px;
+
+  thead {
+    color: #999999;
+  }
+
+  tbody {
+    color: #666666;
+    background-color: #ffffff;
+  }
+
+  td {
+    width: 21px;
+    height: 18px;
+
+    text-align: center;
+  }
+
+  td:hover {
+    color: #ffffff;
+    background-color: #dc025e;
+  }
+
+  button {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.calendar__active-date {
+  color: #ffffff;
+  background-color: #dc025e;
+}
+
+@media (min-width: $desktop-width) {
+  .calendar {
+    width: 212px;
+    height: 235px;
+  }
+}

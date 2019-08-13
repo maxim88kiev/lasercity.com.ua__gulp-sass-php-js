@@ -1,0 +1,60 @@
+.popup-comfort {
+  display: none;
+
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+body[data-current-value = "multiPopupComfort"] {
+  .multi-popup {
+    display: block;
+  }
+  .popup-comfort {
+    display: block;
+  }
+}
+
+.popup-comfort__title {
+  display: none;
+}
+
+.popup-comfort__list {
+  @include list_unstyled;
+
+  font-size: 12px;
+}
+
+.popup-comfort__item--input{
+  border: 1px solid #d6d6d6 !important;
+}
+
+.popup-comfort__item {
+  padding: 10px 0;
+
+  border-bottom: 1px solid #fef2f7;
+}
+
+@media(min-width: $desktop-width) {
+  .popup-comfort {
+    padding: 0;
+    margin: 0;
+  }
+
+  .popup-comfort__title {
+    display: block;
+
+    margin: 0;
+    padding: 0 0 10px 30px;
+
+    font-size: 22px;
+  }
+
+  .popup-comfort__item {
+    padding-left: 15px;
+
+    font-size: 16px;
+    color: #666666;
+
+    border-bottom: 0;
+  }
+}

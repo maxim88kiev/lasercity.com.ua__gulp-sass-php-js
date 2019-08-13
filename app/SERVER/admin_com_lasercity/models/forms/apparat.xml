@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_APPARAT"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="title"
+               type="text"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               required="true"
+        />
+
+        <field name="type"
+               type="list"
+               label="COM_LASERCITY_TABLE_TYPE">
+            <option value="diode">COM_LASERCITY_TABLE_DIODE</option>
+            <option value="alexandrite">COM_LASERCITY_TABLE_ALEXANDRITE</option>
+            <option value="neodymium">COM_LASERCITY_TABLE_NEODYMIUM</option>
+            <option value="ruby">COM_LASERCITY_TABLE_RUBY</option>
+        </field>
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="images"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_IMAGE">
+            <form>
+                <field name="image"
+                       type="media"
+                       preview="true"
+                       label="COM_LASERCITY_TABLE_IMAGE">
+                </field>
+            </form>
+        </field>
+
+        <field name="description"
+               type="languages"
+               label="COM_LASERCITY_TABLE_DESCRIPTION"
+               hint="COM_LASERCITY_TABLE_DESCRIPTION"
+               field="editor"
+        />
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

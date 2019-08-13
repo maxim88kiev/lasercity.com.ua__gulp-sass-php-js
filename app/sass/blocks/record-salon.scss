@@ -1,0 +1,467 @@
+.record-salon__nav {
+  padding: 12px 15px 0;
+
+  border-top: 2px solid #fce5ef;
+}
+
+.record-salon {
+  margin-top: 28px;
+  padding: 20px 15px;
+
+  border-top: 1px solid #dedee0;
+  border-bottom: 1px solid #dedee0;
+}
+
+.record-salon__client {
+  display: flex;
+
+  margin: 0;
+
+  time {
+    align-self: flex-start;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 24px;
+    padding-right: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    background: no-repeat 100% 50%;
+    background-size: 23px;
+  }
+
+  &--byaction {
+    time {
+      background-image: url(../img/discount--pink.svg);
+    }
+  }
+
+  &--bysalon {
+    time {
+      background-image: url(../img/salon--pink.svg);
+    }
+  }
+}
+
+.record-salon__applications-client-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 0 0 25px;
+}
+
+.record-salon__applications-client-name {
+  display: flex;
+  align-items: center;
+
+  min-height: 20px;
+  padding-left: 25px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  background: url("../img/avatar--pink.svg") no-repeat 0 50%;
+}
+
+.record-salon__applications-client-number {
+  display: flex;
+  align-items: center;
+
+  min-height: 20px;
+
+  padding-left: 25px;
+  margin-top: 8px;
+
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+
+  background: url("../img/phone--pink.svg") no-repeat 0 50%;
+}
+
+.record-salon__applications-client-contact {
+  align-self: flex-end;
+
+  height: 31px;
+  width: 44px;
+  margin-left: 27px;
+
+  background: #dc025e url("../img/comment--white.svg") no-repeat 50% 50%;
+  background-size: 20px;
+
+  border: 0;
+
+  border-radius: 8px;
+
+  span {
+    display: none;
+  }
+}
+
+.record-salon__comment {
+  margin: 12px 0 0;
+  padding: 5px 0 0 25px;
+
+  color: #999999;
+  line-height: 15px;
+
+  background: url("../img/comment--pink.svg") no-repeat 0 0;
+  background-size: 20px;
+}
+
+.record-salon__address {
+  margin: 12px 0 0;
+  padding: 5px 0 0 25px;
+
+  color: #999999;
+  font-size: 14px;
+  line-height: 15px;
+
+  background: url("../img/place--pink.svg") no-repeat 0 0;
+  background-size: 23px;
+}
+
+.record-salon__street {
+  display: block;
+  margin-top: 5px;
+
+  color: #cccccc;
+}
+
+.record-salon__procedures {
+  @include list-unstyled;
+  margin-top: 17px;
+
+  border-top: 1px solid #dedee0;
+}
+
+.record-salon__procedure {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  padding: 10px 25px 10px 0;
+
+  border-bottom: 1px solid #dedee0;
+
+  span {
+    line-height: 20px;
+  }
+}
+
+.record-salon__procedure-button {
+  top: 10px;
+  right: 0;
+}
+
+.record-salon__topay-wrapper {
+   margin-top: 8px;
+ }
+
+.record-salon__add-procedure {
+  margin-top: 8px;
+
+  color: #ff92b8;
+
+  background-image: url(../img/plus.svg);
+}
+
+.record-salon__wish-info {
+  margin-top: 25px;
+}
+
+.record-salon__buttons {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+.record-salon__button {
+  width: 147px;
+
+  padding: 13px 12px 13px 37px;
+
+  background-repeat: no-repeat;
+  background-position: 7px 50%;
+  background-size: 24px;
+
+  &--accept {
+    background-image: url(../img/button-verified.svg);
+  }
+
+  &--cancel {
+    margin-left: 7px;
+
+    background-image: url(../img/button-cancel.svg);
+  }
+  
+  &--completed {
+    width: 121px;
+    padding: 8px 12px 8px 35px;
+
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+
+    background-image: url(../img/button-security.svg);
+  }
+  
+  &--abolished {
+    width: 121px;
+    margin-left: 4px;
+    padding: 8px 12px 8px 35px;
+
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+
+    background-image: url(../img/button-cancel.svg);
+  }
+
+  &--trash {
+    width: 42px;
+    margin-left: 4px;
+
+    background-image: url(../img/garbage--white.svg);
+    background-position: 50% 50%;
+  }
+}
+
+.record-salon__held-warning {
+  margin: 25px 38px 0;
+  padding: 48px 20px 15px;
+
+  text-align: center;
+  font-size: 14px;
+
+  background: #f9f9f9 url(../img/garbage--gray.svg) no-repeat 50% 10px;
+  background-size: 25px;
+}
+
+.record-salon__warning-buttons {
+  margin: 10px 0 0;
+}
+
+.record-salon__warning-button {
+  width: 58px;
+
+  padding: 13px 0;
+}
+
+@media (min-width: $desktop-width) {
+  .record-salon__wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  .record-salon__nav {
+    padding: 22px 15px 0;
+
+    border: 0;
+  }
+
+  .record-salon {
+    padding: 20px 20px 32px;
+
+    border: 1px solid #dedee0;
+  }
+
+  .record-salon--held {
+    position: relative;
+
+    padding-bottom: 85px;
+  }
+
+  .record-salon__client {
+    time {
+      align-self: center;
+
+      padding-right: 42px;
+
+      background-size: 25px;
+    }
+  }
+
+  .record-salon__applications-client-wrapper {
+    margin-left: 0;
+
+    flex-direction: row;
+  }
+
+  .record-salon__applications-client-name {
+    margin-left: 30px;
+
+    background-size: 20px;
+  }
+
+  .record-salon__applications-client-number {
+    margin: 0 0 0 85px;
+
+    background-size: 20px;
+  }
+
+  .record-salon__applications-client-contact {
+    margin-left: 60px;
+
+    &:hover {
+      width: 140px;
+      padding-left: 42px;
+
+      font-size: 14px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      background-position-x: 12px;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .record-salon__info-wrapper {
+    padding: 0 135px 0 100px;
+  }
+
+  .record-salon__comment,
+  .record-salon__address {
+    min-height: 23px;
+
+    padding: 0 0 0 25px;
+
+    font-size: 15px;
+    line-height: 18px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .record-salon__comment {
+    margin-top: 18px;
+  }
+
+  .record-salon__address {
+    margin-top: 5px;
+  }
+
+  .record-salon__street {
+    display: inline-block;
+
+    margin: 0 0 0 15px;
+  }
+
+  .record-salon__procedure {
+    padding-right: 35px;
+
+    span {
+      width: 25%;
+      padding: 0 5px;
+    }
+  }
+
+  .record-salon__procedure-time {
+    order: 2;
+  }
+
+  .record-salon__procedure-zona {
+    order: 1;
+  }
+
+  .record-salon__procedure-price {
+    order: 4;
+
+    text-align: center;
+  }
+
+  .record-salon__procedure-apparatus {
+    order: 3;
+  }
+
+  .record-salon__procedure-button {
+    right: 15px;
+  }
+
+  .record-salon__checkout {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 13px;
+  }
+
+  .record-salon__topay-wrapper,
+  .record-salon__add-procedure{
+    margin-top: 0;
+  }
+
+  .record-salon__wish-info {
+    margin-top: 40px;
+  }
+
+  .record-salon__buttons {
+    justify-content: flex-start;
+
+    margin: 40px 0 0;
+  }
+
+  .record-salon__button {
+    width: 177px;
+    padding: 8px 12px 8px 37px;
+
+    font-size: 16px;
+
+    &--cancel {
+      margin-left: 20px;
+    }
+
+    &--completed,
+    &--abolished {
+      width: 270px;
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    &--abolished {
+      margin-left: 20px;
+    }
+
+    &--trash {
+      width: 56px;
+      margin-left: 20px;
+    }
+  }
+
+  .record-salon__held-warning {
+    position: absolute;
+    right: 135px;
+    bottom: 30px;
+
+    width: 215px;
+    margin: 0;
+  }
+
+  .record-salon__warning-button {
+    padding: 8px 0;
+
+    font-size: 16px;
+    font-weight: normal;
+
+    &--no {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,277 @@
+.salon-prices {
+  display: none;
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.salon-prices__table-thead {
+  font-size: 12px;
+  color: #666666;
+
+  & td {
+    padding: 7px 9px 10px;
+  }
+
+  & td:first-child {
+    padding-left: 30px;
+  }
+
+  & td:last-child {
+    padding-right: 15px;
+  }
+}
+
+.salon-prices__thead-row {
+  display: flex;
+
+  td {
+    align-self: center;
+  }
+}
+
+.salon-prices__row-part {
+  flex: 165px;
+}
+
+.salon-prices__row-time {
+  flex: 70px;
+}
+
+.salon-prices__row-price,
+.salon-prices__row-cost {
+  flex: 90px;
+}
+
+.salon-prices__order {
+  align-self: center;
+
+  position: relative;
+}
+
+.salon-prices__table-tbody {
+  display: none;
+
+  font-size: 11px;
+
+  & td {
+    padding: 10px;
+  }
+}
+
+.salon-prices__tbody-row{
+  position: relative;
+
+  display: flex;
+
+  border-top: 1px solid #ffffff;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &--active {
+    font-weight: bold;
+
+    .salon-prices__order-button {
+      display: block;
+    }
+  }
+}
+
+.salon-prices__row-part {
+  label {
+    display: flex;
+  }
+
+  input {
+    display: block;
+    position: relative;
+
+    width: 18px;
+    height: 15px;
+    margin-right: 5px;
+
+    border: 0;
+
+    background-color: transparent;
+  }
+
+  input:checked::after {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    content: '';
+    width: 7px;
+    height: 13px;
+
+    border-right: 2px solid #3a3a3a;
+    border-bottom: 2px solid #3a3a3a;
+  }
+
+}
+
+.salon-prices__row-cost {
+  text-decoration: underline;
+
+  &--old {
+    text-decoration: line-through;
+  }
+
+  &--new {
+    color: #e24a8a;
+    text-decoration: underline;
+  }
+}
+
+.salon-prices__order-button {
+  display: none;
+
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 25px;
+  height: 25px;
+
+
+  background: #dc025e url("../img/pencil--white.svg") no-repeat;
+  background-position: 3px 2px;
+  background-size: 20px;
+
+  border: 0;
+  border-radius: 3px;
+
+  span {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .salon-prices__table-thead {
+    font-size: 14px;
+
+    & td {
+      padding: 7px 33px 10px;
+    }
+
+    & td:first-child {
+      padding-left: 70px;
+    }
+
+    & td:last-child {
+      padding-right: 90px;
+    }
+  }
+
+  .salon-prices__row-part {
+    flex: unset;
+
+    width: 710px;
+  }
+
+  .salon-prices__row-time {
+    flex: unset;
+
+    width: 155px;
+  }
+
+  .salon-prices__row-price,
+  .salon-prices__row-cost {
+    flex: unset;
+
+    width: 175px;
+  }
+
+  .salon-prices__table-tbody {
+    font-size: 16px;
+
+    & td {
+      padding: 8px 33px 8px;
+    }
+
+    & td:first-child {
+      padding-left: 40px;
+    }
+
+    & td:last-child {
+      padding-right: 90px;
+    }
+
+    .salon-prices__row-cost {
+      text-decoration: none;
+
+      white-space: nowrap;
+
+      br {
+        display: none;
+      }
+
+      &--new {
+        text-decoration: none;
+
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .salon-prices__row-price {
+    text-decoration: none;
+  }
+
+  .salon-prices__row-part {
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      width: 16px;
+      height: 16px;
+      margin-right: 14px;
+
+      background-color: #ffffff;
+
+      border-radius: 2px;
+    }
+
+    input:checked::after {
+      top: 45%;
+
+      height: 14px;
+
+      border-width: 3px;
+    }
+  }
+
+  .salon-prices__order-button {
+    align-items: center;
+    justify-content: center;
+
+    width: 127px;
+    padding: 0 5px;
+
+    right: 6px;
+
+    text-align: right;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    border-radius: 7px;
+
+    background-position: 4px 2px;
+
+    span {
+      display: inline;
+    }
+
+    &:hover {
+      background-color: #fc2a82;
+    }
+  }
+}

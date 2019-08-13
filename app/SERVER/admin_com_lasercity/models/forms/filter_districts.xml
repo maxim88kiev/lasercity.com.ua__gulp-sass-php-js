@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search"
+			type="text"
+			hint="JSEARCH_FILTER"
+        />
+
+		<field name="lang"
+			   type="sql"
+			   query="SELECT `lang_code`, `title_native` FROM `#__languages` WHERE `published`=1"
+			   key_field="lang_code"
+			   value_field="title_native"
+			   onchange="this.form.submit();">
+			<option value="">COM_LAVERCITY_TABLE_DEFAULT_LANGUAGE</option>
+		</field>
+
+		<field name="city"
+			   type="dsql"
+			   lang_column="title"
+			   lang_object="citie"
+			   label="COM_LASERCITY_TABLE_CITY"
+			   query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+			   key_field="id"
+			   value_field="value"
+			   onchange="this.form.submit();">
+			<option value="">COM_LASERCITY_TABLE_CITY</option>
+		</field>
+    </fields>
+
+    <fields name="list">
+        <field name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+        />
+    </fields>
+</form>

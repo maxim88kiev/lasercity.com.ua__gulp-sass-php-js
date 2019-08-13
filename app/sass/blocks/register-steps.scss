@@ -1,0 +1,317 @@
+.register-steps__sections {
+  @include list-unstyled;
+}
+
+.register-steps__section {
+  margin-top: 20px;
+  padding-bottom: 24px;
+}
+
+.register-steps {
+  border-top: 2px solid #fef2f7;
+}
+
+.register-steps__title-wrapper {
+  display: flex;
+  align-items: center;
+
+  & span {
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  &:before {
+    display: block;
+    align-self: center;
+
+    position: absolute;
+    left: 0;
+
+    content: '';
+    width: 100%;
+    height: 1px;
+
+    background-color: #dc025e;
+  }
+
+  .title-lines {
+    position: relative;
+
+    width: unset;
+
+    background-color: #ffffff;
+  }
+
+  .title-lines:before,
+  .title-lines:after {
+    display: none;
+  }
+}
+
+.register-steps__title {
+  text-align: left;
+  font-size: 18px;
+
+  padding: 0 8px 0 15px;
+}
+
+.register-steps__button-back {
+  position: relative;
+
+  display: block;
+  margin-left: 15px;
+
+  width: 36px;
+  height: 36px;
+
+  background-color: #ffbfdb;
+
+  border-radius: 8px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%) rotate(45deg);
+
+    content: '';
+
+    width: 17px;
+    height: 17px;
+
+    border-bottom: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+  }
+}
+
+.register-steps__text {
+  margin: 20px 0 0;
+  padding: 0 15px;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.register-steps__label {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 22px;
+
+  input {
+    align-self: center;
+
+    width: 286px;
+    padding: 10px 15px;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+  }
+
+  &--error span {
+    align-self: center;
+
+    display: block;
+    margin-top: 10px;
+
+    font-size: 16px;
+    color: #dc025e;
+  }
+}
+
+.register-steps__button-continue {
+  display: block;
+
+  margin: 15px auto 0;
+  padding: 10px 0;
+
+  font-size: 16px;
+}
+
+.register-steps__section--organization {
+  padding-bottom: 275px;
+}
+
+.register-steps__input-organization-wrapper {
+  position: relative;
+}
+
+.register-steps__input-organization:focus {
+  border-color: #000000;
+
+  outline: none;
+}
+
+.register-steps__organization-autocomplete {
+  width: 286px;
+
+  box-shadow: unset;
+
+  .autocomplete__list {
+    max-height: 247px;
+    margin-top: 1px;
+
+    border: 1px solid #a2a2a2;
+
+    border-radius: 6px;
+  }
+
+  .autocomplete__item {
+    flex-direction: column;
+
+    padding: 2px 10px;
+  }
+
+  .autocomplete__item:first-child {
+    border-bottom: 2px solid #dc025e;
+  }
+
+  .autocomplete__item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .autocomplete__item:hover:after {
+    display: none;
+  }
+
+  .autocomplete__item a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .autocomplete__item span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #acacac;
+  }
+}
+
+.register-steps__input-confirm {
+  background-color: #f8f8f8;
+
+  border: 0;
+}
+
+.register-steps__confirm-again {
+  margin-top: 17px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: underline;
+
+  background-color: transparent;
+  border: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .register-steps__section {
+    min-height: 884px;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .register-steps__section-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 645px 0 83px;
+  }
+
+  .register-steps__title-wrapper {
+    span {
+      left: 40px;
+      margin-left: -55px;
+    }
+
+    .register-steps__title {
+      padding: 0 24px;
+    }
+  }
+
+  .register-steps__title {
+    margin-left: 40px;
+
+    font-size: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .register-steps__button-back {
+    width: 40px;
+    height: 40px;
+    margin-left: 17px;
+
+    &:before {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  .register-steps__text {
+    margin: 25px 0 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .register-steps__label {
+    margin-top: 35px;
+
+    input {
+      width: 100%;
+      padding: 15px 10px;
+
+      font-size: 18px;
+
+      border-radius: 8px;
+    }
+
+    &--error span {
+      align-self: flex-start;
+
+      font-size: 18px;
+    }
+  }
+
+  .register-steps__button-continue {
+    width: 100%;
+    margin-top: 18px;
+    padding: 18px 0 15px;
+
+    font-size: 21px;
+  }
+
+  .register-steps__section--organization {
+    padding-bottom: 0;
+  }
+
+  .register-steps__organization-autocomplete {
+    width: 100%;
+
+    .autocomplete__list {
+      max-height: 346px;
+    }
+
+    .autocomplete__item {
+      padding: 8px 23px;
+    }
+
+    .autocomplete__item a {
+      font-size: 18px;
+    }
+
+    .autocomplete__item span {
+      font-size: 16px;
+    }
+  }
+
+  .register-steps__confirm-again {
+    margin-top: 12px;
+    padding: 0;
+
+    font-size: 16px;
+  }
+}

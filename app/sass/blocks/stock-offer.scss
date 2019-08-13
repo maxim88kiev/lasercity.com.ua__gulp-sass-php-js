@@ -1,0 +1,30 @@
+.stock-offer {
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+.stock-offer__title {
+  font-size: 18px;
+}
+
+.stock-offer__slider {
+  padding-top: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .stock-offer {
+    padding-bottom: 50px;
+  }
+
+  .stock-offer__title {
+    font-size: 24px;
+
+    &::before {
+      width: 35%;
+    }
+  }
+
+  .stock-offer__slider {
+    padding-top: 35px;
+  }
+}

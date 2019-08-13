@@ -1,0 +1,87 @@
+.stock-slider {
+  .slider__item-wrapper {
+    position: relative;
+
+    border: 1px solid #ccc;
+  }
+}
+
+.stock-slider__item-discount {
+  z-index: 100;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 55px;
+  width: 55px;
+
+  color: #ffffff;
+  font-size: 21px;
+
+  background-color: #dc025e;
+  border-radius: 50%;
+}
+
+.stock-slider__item-wrapper {
+  padding: 8px 11px 10px 7px ;
+
+  border-top: 1px solid #ccc;
+}
+
+.stock-slider__item-title {
+  margin: 0;
+  padding-left: 25px;
+
+  font-size: 14px;
+  color: #333333;
+
+  background: url("../img/discount.svg") no-repeat 0 50%;
+}
+
+.stock-slider__item-address {
+  display: flex;
+  align-items: center;
+
+  min-height: 21px;
+  margin: 12px 0 0;
+  padding-left: 25px;
+
+  color: #666666;
+
+  background: url("../img/place--gray.svg") no-repeat 0 0;
+  background-size: 19px;
+}
+
+.stock-slider__item-footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 10px 0 0;
+}
+
+.stock-slider__item-purchased {
+  display: flex;
+  align-items: center;
+
+  min-height: 21px;
+  padding-left: 25px;
+
+  color: #666666;
+
+  background: url("../img/bag--gray.svg") no-repeat 0 5px;
+  background-size: 20px;
+}
+
+.stock-slider__item-look {
+  width: 110px;
+  padding: 8px;
+}
+
+@media (min-width: $desktop-width) {
+  .stock-slider__item-look {
+    font-size: 13px;
+  }
+}

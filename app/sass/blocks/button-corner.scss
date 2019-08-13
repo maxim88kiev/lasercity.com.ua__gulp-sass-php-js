@@ -1,0 +1,14 @@
+.button-corner {
+  width: 13px;
+  height: 13px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+
+  transform: rotate(45deg);
+}

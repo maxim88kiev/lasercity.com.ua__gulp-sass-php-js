@@ -1,0 +1,145 @@
+.records-salon {
+  border-top: 2px solid #fce5ef;
+
+  padding-bottom: 65px;
+}
+
+.records-salon__warning {
+  display: flex;
+  align-items: center;
+
+  min-height: 45px;
+  margin: 10px 15px 0;
+  padding: 10px 10px 10px 45px;
+
+  font-size: 12px;
+  line-height: 13px;
+  color: #ff92b8;
+
+  border: 2px solid #ff92b8;
+
+  background: url("../img/pay-attention.svg") no-repeat 5px 5px;
+  background-size: 31px;
+}
+
+.records-salon__filter {
+  margin-top: 12px;
+  padding: 0 15px;
+}
+
+.records-salon__filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 230px;
+  margin: 0;
+  padding: 12px 10px 12px 59px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+
+  background: url(../img/filter-mobile.svg) 16px 5px no-repeat;
+
+  background-size: 32px;
+}
+
+.records-salon__filter-button {
+  width: 22px;
+  height: 10px;
+
+  background: transparent url(../img/button-corner.svg) no-repeat 50% 50%;
+
+  border: 0;
+}
+
+.records-salon__filter-results {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-unstyled;
+  margin: 5px 0 0 -15px;
+}
+
+.records-salon__filter-result {
+  margin: 5px 0 0 15px;
+  padding: 8px 10px;
+
+  color: #666666;
+
+  background-color: #fff5f9;
+
+  border-radius: 10px;
+}
+
+.records-salon__organization-item-button {
+  position: relative;
+
+  margin-left: 45px;
+}
+
+.records-salon__filter-reset {
+  margin-top: 5px;
+  padding: 8px 30px 8px 10px;
+
+  color: #666666;
+
+  background-color: #fafafa;
+
+  border: 0;
+  border-radius: 10px;
+}
+
+.records-salon__applications {
+  margin-top: 28px;
+}
+
+.records-salon__calendar {
+  margin-top: 28px;
+}
+
+@media (min-width: $desktop-width) {
+  .records-salon {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px 80px;
+
+    border: 0;
+  }
+
+  .records-salon__warning {
+    margin: 12px 0 0;
+    padding: 0 10px 0 80px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    background-position-x: 21px;
+  }
+
+  .records-salon__filter {
+    margin-top: 17px;
+    padding: 0;
+  }
+
+  .records-salon__filter-header {
+    max-width: 250px;
+
+    font-size: 16px;
+  }
+
+  .records-salon__filter-reset {
+    margin-top: 10px;
+  }
+
+  .records-applications {
+    margin-top: 28px;
+  }
+
+  .records-salon__calendar {
+    margin-top: 85px;
+  }
+}

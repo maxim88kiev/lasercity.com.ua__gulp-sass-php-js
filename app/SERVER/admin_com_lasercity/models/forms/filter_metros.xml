@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search"
+			type="text"
+			hint="JSEARCH_FILTER"
+        />
+		<field name="lang"
+			   type="sql"
+			   query="SELECT `lang_code`, `title_native` FROM `#__languages` WHERE `published`=1"
+			   key_field="lang_code"
+			   value_field="title_native"
+			   onchange="this.form.submit();">
+			<option value="">COM_LAVERCITY_TABLE_DEFAULT_LANGUAGE</option>
+		</field>
+
+		<field name="city"
+			   type="dsql"
+			   lang_column="title"
+			   lang_object="citie"
+			   label="COM_LASERCITY_TABLE_CITY"
+			   query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+			   key_field="id"
+			   value_field="value"
+			   onchange="this.form.submit();">
+			<option value="">COM_LASERCITY_TABLE_CITY</option>
+		</field>
+
+		<field name="district"
+			   type="dsql"
+			   state_column="city"
+			   state_filter_pos="2"
+			   lang_column="title"
+			   lang_object="district"
+			   label="COM_LASERCITY_TABLE_CITY"
+			   query="SELECT `id`, `city` FROM `#__lasercity_districts` WHERE `published`"
+			   key_field="id"
+			   value_field="value"
+			   onchange="this.form.submit();">
+			<option value="">COM_LASERCITY_TABLE_DISTRICT</option>
+		</field>
+
+		<field name="line"
+			   type="list"
+			   label="COM_LASERCITY_TABLE_LINE"
+			   onchange="this.form.submit();">
+			<option value="">COM_LASERCITY_TABLE_LINE</option>
+			<option value="red">COM_LASERCITY_TABLE_LINE_RED</option>
+			<option value="green">COM_LASERCITY_TABLE_LINE_GREEN</option>
+			<option value="blue">COM_LASERCITY_TABLE_LINE_BLUE</option>
+		</field>
+    </fields>
+
+    <fields name="list">
+        <field name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+        />
+    </fields>
+</form>

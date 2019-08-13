@@ -1,0 +1,18 @@
+.salon-navigation {
+  margin-top: 14px;
+  padding: 0 15px;
+}
+
+.salon-navigation {
+  .breadcrumbs {
+    padding: 0;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .salon-navigation {
+    max-width: 1170px;
+    margin: 25px auto 0;
+
+  }
+}

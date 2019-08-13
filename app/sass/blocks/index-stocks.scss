@@ -1,0 +1,93 @@
+.index-stocks {
+  margin-top: 22px;
+}
+
+.index-stocks__title {
+  font-size: 18px;
+  min-height: 35px;
+
+  &::before {
+    margin-right: 43px;
+  }
+
+  span {
+    position: relative;
+  }
+
+  span::before {
+    position: absolute;
+    left: -35px;
+    top: -10px;
+
+    content: '';
+
+    width: 30px;
+    height: 35px;
+
+    background: url("../img/discount-title.svg") no-repeat;
+  }
+
+  output {
+    margin-left: 5px;
+  }
+}
+
+.index-stocks__slider {
+  padding-top: 25px;
+}
+
+@media (min-width: $desktop-width) {
+  .index-stocks {
+    order: 6;
+
+    margin-top: 50px;
+  }
+
+  .index-stocks__title {
+    font-size: 30px;
+
+    &:before {
+      margin-right: 95px;
+    }
+
+    &::after {
+      margin-left: 55px;
+    }
+
+    span::before {
+      left: -50px;
+
+      width: 48px;
+      height: 57px;
+
+      background-size: contain;
+    }
+  }
+
+  .index-stocks__slider {
+    padding-top: 0;
+
+    .slider__list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      overflow: unset;
+      overflow-x: unset;
+      -ms-overflow-style: unset;
+      scrollbar-width: unset;
+    }
+
+    .slider__item-wrapper {
+      max-width: 360px;
+    }
+
+    .slider__item {
+      width: unset;
+      margin-top: 45px;
+    }
+
+    .slider__button {
+      display: none;
+    }
+  }
+}

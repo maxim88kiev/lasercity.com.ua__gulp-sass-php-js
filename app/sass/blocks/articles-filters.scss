@@ -1,0 +1,27 @@
+.articles-filters {
+  .filters__salon-filter {
+    position: relative;
+
+    flex-direction: row;
+    justify-content: center;
+
+    & .filters__name {
+      width: 100%;
+      padding-right: 35px;
+
+      font-size: 16px;
+    }
+
+    & .filters__button {
+      z-index: 1;
+      margin-left: -12px;
+    }
+  }
+}
+
+.articles-filters__wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+}

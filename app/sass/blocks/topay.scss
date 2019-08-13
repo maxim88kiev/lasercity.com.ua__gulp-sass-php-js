@@ -1,0 +1,40 @@
+.topay {
+  display: flex;
+  align-items: center;
+
+  margin-top: 8px;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.topay__money-list {
+  display: flex;
+
+  @include list-unstyled;
+  margin: 0 10px;
+}
+
+.topay__money-item {
+  width: 28px;
+  height: 28px;
+  margin-left: 8px;
+
+  border: 1px solid #eeeeee;
+
+  background: no-repeat 50% 50%;
+  background-size: 22px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &--card {
+    background-image: url(../img/card.svg);
+
+  }
+
+  &--cash {
+    background-image: url(../img/money.svg);
+  }
+}

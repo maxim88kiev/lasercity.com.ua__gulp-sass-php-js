@@ -1,0 +1,46 @@
+.button-addfile {
+  z-index: 100;
+  position: relative;
+}
+
+
+.button-addfile__input:focus {
+  & + .button-addfile__wrapper {
+    outline: 2px solid #a6c7ff;
+  }
+}
+.button-addfile__wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-addfile__text {
+  display: flex;
+  align-items: center;
+
+  min-height: 21px;
+  margin: 0;
+  padding-left: 29px;
+
+  font-size: 14px;
+  color: #666666;
+
+  background: url('../img/addphoto.svg') 0 50% no-repeat ;
+  background-size: 20px;
+}
+
+@media(min-width: $desktop-width) {
+  .button-addfile__text {
+    padding-left: 30px;
+  }
+}

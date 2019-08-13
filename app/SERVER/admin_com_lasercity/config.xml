@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="articles"
+		label="Основная информация"
+		addfieldpath="/administrator/components/com_lasercity/models/fields"
+	>
+
+		<field name="city"
+			   type="dsql"
+			   type_component='lasercity'
+			   lang_column="title"
+			   lang_object="citie"
+			   label="COM_LASERCITY_TABLE_CITY"
+			   query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+			   key_field="id"
+			   value_field="value">
+		</field>
+	</fieldset>
+</config>

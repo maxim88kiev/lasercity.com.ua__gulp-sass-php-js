@@ -1,0 +1,93 @@
+.article-benefits {
+  margin: 35px 0;
+}
+
+.article-benefits__title {
+  font-size: 14px;
+}
+
+.article-benefits__list {
+  @include list-unstyled;
+  margin-top: 23px;
+}
+
+.article-benefits__item {
+  min-height: 75px;
+  margin-top: 6px;
+  padding: 12px 15px 12px 85px;
+
+  line-height: 15px;
+
+  background-color: #fcfcfc;
+  background-repeat: no-repeat;
+  background-position: 15px 13px;
+  background-size: 60px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &--gold {
+    background-image: url(../img/article-advantages--gold.svg);
+  }
+
+  &--microscope {
+    background-image: url(../img/article-advantages--microscope.svg);
+  }
+
+  &--certificate {
+    background-image: url(../img/article-advantages--certificate.svg);
+  }
+
+  &--achievement {
+    background-image: url(../img/article-advantages--achievement.svg);
+  }
+
+  &--like {
+    background-image: url(../img/article-advantages--like.svg);
+  }
+}
+
+.article-benefits__item-text {
+  margin: 3px 0 0 0;
+}
+
+@media (min-width: $desktop-width) {
+  .article-benefits {
+    margin: 45px 0;
+  }
+
+  .article-benefits__title {
+    font-size: 21px;
+  }
+
+  .article-benefits__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .article-benefits__list {
+    margin-top: 35px;
+  }
+
+  .article-benefits__item {
+    min-height: 100px;
+    margin-top: 10px;
+
+    padding: 32px 15px 32px 100px;
+
+    background-position: 15px 50%;
+    background-size: 75px;
+  }
+
+  .article-benefits__item-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .article-benefits__item-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

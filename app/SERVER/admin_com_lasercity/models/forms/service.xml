@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_SERVICE"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="zones"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_ZONES">
+            <form>
+                <field name="zone"
+                       type="dsql"
+                       lang_column="title"
+                       lang_object="zone"
+                       label="COM_LASERCITY_TABLE_ZONE"
+                       query="SELECT `id` FROM `#__lasercity_zones` WHERE `published`"
+                       key_field="id"
+                       value_field="value">
+                </field>
+            </form>
+        </field>
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,503 @@
+.popup-recording {
+  z-index: 1000;
+
+  display: none;
+
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 290px;
+  padding-bottom: 20px;
+
+  background-color: #ffffff;
+
+  border-top: 7px solid #dc025e;
+}
+
+body[data-current-value = "recording"] {
+  .popup-recording {
+    display: block;
+  }
+}
+
+.popup-recording--no-accaunt {
+  .popup-recording__personal-inputs {
+    display: none;
+  }
+}
+
+.popup-recording__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-recording__header {
+  padding: 16px 20px 15px 45px;
+
+  background: #ffe5f2 url("../img/pencil.svg") no-repeat;
+  background-position: 10px 23px;
+  background-size: 30px;
+}
+
+.popup-recording__title {
+  margin: 0;
+
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.popup-recording__where {
+  margin: 7px 0 0;
+
+  font-size: 12px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.popup-recording__personal-inputs {
+  margin: 0;
+  padding: 0 23px;
+
+  input {
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px 15px;
+
+    font-size: 14px;
+
+    border-radius: 6px;
+  }
+}
+
+.popup-recording__selected-list {
+  @include list-unstyled;
+  padding: 0 23px;
+}
+
+.popup-recording__selected-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin-top: 14px;
+  padding: 2px 18px 2px 28px;
+
+
+  background: no-repeat;
+  background-size: 14px;
+
+  border: 1px solid #000000;
+  border-radius: 6px;
+
+  b {
+    font-size: 16px;
+  }
+
+  span {
+    font-size: 14px;
+    color: #6f6f6f;
+    line-height: 14px;
+  }
+  
+  &--women {
+    background-image: url(../img/woman.svg);
+    background-position: 2px 5px;
+    background-size: 24px;
+  }
+
+  &--men {
+    background-image: url(../img/man.svg);
+    background-position: 4px 50%;
+    background-size: 19px;
+  }
+}
+
+.popup-recording__selected-del {
+  top: 10px;
+  right: 6px;
+
+}
+
+.popup-recording__input-wrapper {
+  position: relative;
+
+  margin-top: 14px;
+  padding: 0 23px;
+}
+
+.popup-recording__input {
+  width: 100%;
+  padding: 10px 15px;
+
+  font-size: 14px;
+
+  border-color: #000000;
+  border-radius: 6px;
+}
+
+.popup-recording__input-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+
+  width: 21px;
+  height: 11px;
+  padding: 0;
+
+  background: transparent url("../img/button-corner.svg") no-repeat 50% 50%;
+
+  border: 0;
+}
+
+.popup-recording__autocomplete {
+  width: 244px;
+  margin-top: 1px;
+
+  border: 1px solid #a2a2a2;
+  border-radius: 6px;
+
+  box-shadow: 0 5px 8px #444;
+
+  .autocomplete__list {
+    max-height: 180px;
+  }
+
+  .autocomplete__item {
+    flex-direction: column;
+
+    padding: 3px 13px 5px 40px;
+
+    background: no-repeat;
+
+    button {
+      padding: 0;
+
+      text-align: left;
+      font-weight: bold;
+      font-size: 16px;
+
+      background-color: transparent;
+
+      border: 0;
+    }
+
+    span {
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+  }
+
+  .autocomplete__item--man {
+    background-image: url('../img/man.svg');
+    background-position: 15px 10px;
+    background-size: 20px;
+  }
+
+  .autocomplete__item--woman {
+    background-image: url('../img/woman.svg');
+    background-position: 10px 10px;
+    background-size: 24px;
+  }
+
+  .autocomplete__item:hover {
+    font-weight: normal;
+
+    background-color: #f1f1f1;
+  }
+
+  .autocomplete__item:hover::after {
+    display: none;
+  }
+}
+
+.popup-recording__add-button {
+  margin: 8px 23px 0;
+
+  color: #ff92b8;
+
+  background-image: url('../img/plus.svg');
+}
+
+.popup-recording__wish-info {
+  margin: 21px 0 0;
+  padding: 0 23px;
+
+  .select-date__wish-day {
+    align-items: flex-start;
+    flex-direction: column;
+
+    output {
+      margin: 7px 0 0;
+    }
+  }
+
+  .select-date__wish-time {
+    input {
+      width: 40px;
+      padding: 7px 10px;
+    }
+
+    span {
+      margin: 5px 5px 0;
+    }
+  }
+}
+
+.popup-recording__comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 13px 0 0;
+  padding: 0 23px;
+
+  font-size: 14px;
+
+  textarea {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+
+    border-radius: 8px;
+    resize: none;
+  }
+}
+
+.popup-recording__topay {
+  margin-top: 27px;
+  padding: 0 23px;
+}
+
+.popup-recording__send-button {
+  align-self: center;
+
+  width: 243px;
+  margin-top: 28px;
+
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.popup-recording__rules {
+  margin: 10px 0 0;
+
+  text-align: center;
+  font-size: 11px;
+
+  a {
+    color: #dc025e;
+    text-decoration: none;
+  }
+}
+
+.popup-recording__closed {
+  top: 7px;
+  right: 7px;
+}
+
+@media (min-width: $desktop-width) {
+  .popup-recording {
+    width: 555px;
+    padding-bottom: 35px;
+  }
+
+  .popup-recording--no-accaunt {
+    .popup-recording__input-wrapper {
+      margin-top: 40px;
+    }
+  }
+
+  .popup-recording__header {
+    padding: 20px 45px 22px 165px;
+
+    background-position: 110px 20px;
+    background-size: 46px;
+  }
+
+  .popup-recording__title {
+    font-size: 24px;
+  }
+
+  .popup-recording__where {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .popup-recording__personal-inputs {
+    padding: 0 67px;
+
+    input {
+      padding: 16px 15px;
+
+      font-size: 18px;
+    }
+  }
+
+  .popup-recording__selected-list {
+    padding: 0 67px;
+  }
+
+  .popup-recording__selected-item {
+    padding: 7px 32px 7px 48px;
+
+    b {
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &--women {
+      background-position: 8px 12px;
+      background-size: 33px;
+    }
+
+    &--men {
+      background-position: 12px 50%;
+      background-size: 27px;
+    }
+  }
+
+  .popup-recording__selected-del {
+    top: 18px;
+    right: 17px;
+  }
+
+  .popup-recording__input-wrapper {
+    margin-top: 13px;
+    padding: 0 67px;
+  }
+
+  .popup-recording__input {
+    padding: 16px 15px;
+
+    font-size: 18px;
+  }
+
+  .popup-recording__input-button {
+    top: 22px;
+    right: 85px;
+  }
+
+  .popup-recording__autocomplete {
+    width: 421px;
+    margin-top: 2px;
+
+    .autocomplete__list {
+      max-height: 243px;
+    }
+
+    .autocomplete__item {
+      padding: 9px 30px 10px 45px;
+
+      button {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .autocomplete__item--man {
+      background-position: 10px 15px;
+      background-size: 30px;
+    }
+
+    .autocomplete__item--woman {
+      background-position: 7px 13px;
+      background-size: 34px;
+    }
+  }
+
+  .popup-recording__add-button {
+    margin: 15px 67px 0;
+
+    font-size: 16px;
+  }
+
+  .popup-recording__wish-info {
+    flex-direction: column;
+
+    margin-top: 28px;
+    padding: 0 67px;
+
+    font-size: 16px;
+
+    .select-date__wish-day {
+      align-self: flex-start;
+
+      flex-direction: row;
+      align-items: center;
+
+      output {
+        margin-left: 10px;
+      }
+    }
+
+    .select-date__wish-time {
+      align-self: flex-start;
+
+      margin: 17px 0 0;
+    }
+  }
+
+  .popup-recording__comment {
+    margin-top: 18px;
+    padding: 0 67px;
+
+    font-size: 17px;
+
+    input {
+      height: 113px;
+    }
+  }
+
+  .popup-recording__topay {
+    margin-top: 25px;
+    padding: 0 67px;
+
+    font-size: 18px;
+    font-weight: normal;
+
+    output {
+      font-weight: bold;
+    }
+  }
+
+  .popup-recording__send-button {
+    width: 420px;
+    margin-top: 30px;
+    padding: 17px 0;
+
+    font-size: 21px;
+  }
+
+  .popup-recording__rules {
+    margin-top: 10px;
+
+    font-size: 16px;
+  }
+
+  .popup-recording__closed {
+    top: 17px;
+    right: 17px;
+
+    width: 15px;
+    height: 15px;
+
+    &:before,
+    &:after {
+      width: 16px;
+    }
+  }
+}

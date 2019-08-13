@@ -1,0 +1,27 @@
+.modal {
+  display: none;
+
+  z-index: 900;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,.6);
+
+
+  overflow-y: auto;
+
+  &--active {
+    display: block;
+  }
+}
+
+body:not([data-current-value=""]) {
+  .modal {
+    display: block;
+  }
+}

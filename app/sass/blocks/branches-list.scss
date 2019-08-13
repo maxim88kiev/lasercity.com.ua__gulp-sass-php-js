@@ -1,0 +1,297 @@
+.branches-list {
+  @include list-unstyled;
+}
+
+.branches-list__branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 3px;
+  padding: 0 15px 12px;
+
+  background-color: #f5f5f5;
+
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.branches-list__information {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: 10px;
+}
+
+.branches-list__contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.branches-list__title {
+  margin: 0;
+
+  font-size: 15px;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.branches-list__address {
+  & .salon-address__underground {
+    margin-top: 5px;
+  }
+
+  & .salon-address__street {
+    margin-top: 12px;
+  }
+}
+
+.branches-list__phones {
+  margin-top: 10px;
+
+  .phonebook__wrapper {
+    background-color: #f5f5f5;
+  }
+
+  .phonebook__item {
+    a::after {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.branches-list__workdays {
+  display: none;
+}
+
+.branches-list__aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.branches-list__rating {
+  flex-direction: column;
+}
+
+.branches-list__rating {
+  & .rating-salon__point-wrapper {
+    align-self: flex-end;
+  }
+
+  & .rating-salon__point {
+    font-size: 21px;
+  }
+
+  & .rating-salon-stars {
+    margin-left: 5px;
+  }
+
+  & .rating-salon__star {
+    display: none;
+
+    width: 22px;
+    height: 22px;
+
+    background-size: 35px;
+    background-position: -17px 1px;
+
+    &:first-child {
+      display: block;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  & .rating-salon__reviews {
+    align-self: flex-end;
+
+    font-size: 11px;
+  }
+}
+
+.branches-list__map {
+  align-self: flex-end;
+
+  margin-top: 13px;
+}
+
+.branches-list__question {
+  align-self: flex-end;
+
+  min-height: 25px;
+  margin: 10px 0 0;
+
+  font-size: 12px;
+  color: #333333;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+
+  background-color: transparent;
+
+  border: 0;
+}
+
+.branches-list__button {
+  margin-top: 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .branches-list__branch {
+    position: relative;
+
+    align-items: unset;
+
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+  }
+
+  .branches-list__contacts {
+    min-width: 400px;
+  }
+
+  .branches-list__title {
+    font-size: 21px;
+  }
+
+  .branches-list__address {
+    min-height: 39px;
+    margin-top: 12px;
+  }
+
+  .branches-list__address {
+    & .salon-address__underground {
+      margin-top: 0;
+    }
+
+    & .salon-address__street {
+      min-height: unset;
+      margin-top: 5px;
+      padding-top: 0;
+    }
+  }
+
+  .branches-list__schedule {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  .branches-list__phones {
+    min-width: 185px;
+
+    .phonebook__wrapper {
+      justify-content: flex-start;
+    }
+
+    .phonebook__list {
+      padding: 0 0 0 23px;
+
+      font-size: 14px;
+
+      background-position: 2px 0;
+      background-size: 17px;
+    }
+
+    .phonebook__item,
+    .phonebook__popup-item {
+      padding-right: 13px;
+
+      a::after {
+        right: 0;
+        width: 16px;
+        height: 17px;
+      }
+    }
+
+    .phonebook__button {
+      margin: 2px 0 0
+    }
+
+    .phonebook__popup {
+      .phonebook__list {
+        padding: 0;
+      }
+    }
+  }
+
+  .branches-list__workdays {
+    height: 19px;
+    margin: 0 0 0 35px;
+    cursor: pointer;
+  }
+
+  .branches-list__aside {
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .branches-list__rating {
+    & .rating-salon__point-wrapper {
+      align-self: flex-end;
+    }
+
+    & .rating-salon-stars {
+      margin-left: 10px;
+    }
+
+    & .rating-salon__star {
+      display: block;
+      margin-left: 0;
+
+      width: 18px;
+      height: 18px;
+
+      background-size: 35px;
+      background-position: -17px 0;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    & .rating-salon__star--transparent {
+      background-position: 0 -17px;
+    }
+
+    & .rating-salon__reviews {
+      align-self: flex-end;
+
+      font-size: 14px;
+    }
+  }
+
+  .branches-list__map {
+    align-self: flex-start;
+
+    margin-top: 5px;
+  }
+
+  .branches-list__question {
+    margin: 0 195px 0 0;
+
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .branches-list__button {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+
+    width: 160px;
+    padding: 6px 30px;
+
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,42 @@
+.article-texts {
+  margin: 20px 0;
+}
+
+.article-texts__title {
+  font-size: 14px;
+}
+
+.article-texts__text {
+  margin: 15px 0 0;
+  padding: 0 15px;
+
+  line-height: 15px;
+  color: #333333;
+
+  a {
+    text-decoration: none;
+    color: #fc1777;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .article-texts__title {
+    font-size: 21px;
+  }
+
+  .article-texts__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .article-texts__text {
+    margin-top: 20px;
+
+    font-size: 16px;
+    line-height: 21px;
+
+    &:first-letter {
+      margin-left: 10px;
+    }
+  }
+}

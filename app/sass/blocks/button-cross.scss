@@ -1,0 +1,32 @@
+.button-cross {
+  position: absolute;
+  
+  width: 13px;
+  height: 13px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    content: "";
+    width: 14px;
+    height: 2px;
+
+    background-color: #b4b0b2;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}

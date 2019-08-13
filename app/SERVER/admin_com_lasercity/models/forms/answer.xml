@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_REVIEW"
+              description="COM_LASERCITY_VIEW_NAME_REVIEW"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="answer"
+               type="textarea"
+               label="Ответ"
+               field="textarea"
+        />
+
+        <field name="image"
+               type="media"
+               label="Аватар"
+               preview="true"
+        />
+
+
+        <!--<field name="foto"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_IMAGE">
+            <form>
+                <field name="foto"
+                       type="media"
+                       preview="true"
+                       label="COM_LASERCITY_TABLE_IMAGE">
+                </field>
+            </form>
+        </field>
+
+        <field name="default_language"
+               type="sql"
+               label="COM_LAVERCITY_TABLE_DEFAULT_LANGUAGE"
+               query="SELECT `lang_code`, `title_native` FROM `#__languages` WHERE `published`"
+               key_field="lang_code"
+               value_field="title_native">
+        </field>
+
+        <field name="affiliate_id"
+               required="true"
+               type="dsql"
+               lang_column="title"
+               lang_object="affiliate"
+               label="COM_LASERCITY_TABLE_AFFILIATE"
+               query="SELECT `id` FROM `#__lasercity_affiliates` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>-->
+
+        <field name="city_id"
+
+               required="true"
+               type="dsql"
+
+               lang_column="title"
+               lang_object="citie"
+
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <!--<field name="rank"
+               type="list"
+               label="Ранг пользователя"
+               description=""
+               class="chzn-color-state">
+            <option value="0">Новичок</option>
+            <option value="1">Бывалый</option>
+            <option value="2">Эксперт</option>
+        </field>
+
+        <field name="confirm"
+               type="list"
+               label="Подтвердить отзыв"
+               description=""
+               class="chzn-color-state">
+            <option value="1">Подтвержден</option>
+            <option value="0">Не подтвержден</option>
+        </field>-->
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               description=""
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+
+    </fieldset>
+    
+</form>

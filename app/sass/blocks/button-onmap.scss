@@ -1,0 +1,26 @@
+.button-onmap {
+  display: flex;
+  align-items: center;
+
+  min-height: 19px;
+  padding-right: 23px;
+
+  text-align: right;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+
+
+  background: transparent url('../img/earth.svg') right center no-repeat;
+  background-size: 19px;
+}
+
+@media(min-width: $desktop-width) {
+  .button-onmap {
+    font-size: 14px;
+  
+    background-position: 99% center;
+  }
+}
+

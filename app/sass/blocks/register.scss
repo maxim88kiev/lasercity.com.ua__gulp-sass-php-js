@@ -1,0 +1,198 @@
+.register {
+  padding: 18px 0 47px;
+
+  border-top: 2px solid #fef2f7;
+}
+
+.register__title {
+  margin: 0;
+
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.register__who {
+  margin-top: 22px;
+}
+
+.register__who-title {
+  font-size: 18px;
+}
+
+.register__who-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+}
+
+.register__who-choices {
+  span {
+    width: 108px;;
+  }
+}
+
+
+.register__who-inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 5px 0 0;
+
+  label, p {
+    margin: 0;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 243px;
+    margin-top: 15px;
+    padding: 10px 15px;
+
+    font-size: 16px;
+
+    border: 1px solid #adadad;
+
+    border-radius: 6px;
+  }
+}
+
+.register__who-label--error {
+  input {
+    border-color: #fc2a82;
+  }
+
+  .register__who-input-error {
+    display: block;
+  }
+}
+
+.register__who-input-error {
+  max-width: 420px;
+  flex-basis: 100%;
+
+  display: none;
+  margin-top: 10px;
+
+  text-align: center;
+  font-size: 16px;
+  color: #fc2a82;
+}
+
+.register__who-password-btn {
+  top: 28px;
+  right: 15px;
+}
+
+.register__either {
+  margin-top: 23px;
+}
+
+.register__either-title {
+  font-size: 18px;
+}
+
+.register__either-description {
+  margin: 10px 0 0;
+
+  text-align: center;
+  font-size: 16px;
+}
+
+.register__either-links {
+  margin: 11px 0 0;
+}
+
+.register__either-rules {
+  margin-top: 35px;
+}
+
+.register__sent-button {
+  align-self: center;
+
+  margin-top: 30px;
+
+  font-size: 18px;
+  font-weight: normal;
+}
+
+@media (min-width: $desktop-width) {
+  .register {
+    padding: 38px 0 140px;
+  }
+
+  .register__title {
+    font-size: 36px;
+  }
+
+  .register__who {
+    margin-top: 20px;
+  }
+
+  .register__who-title {
+    font-size: 30px;
+  }
+
+  .register__who-form {
+    margin-top: 22px;
+  }
+
+  .register__who-choice {
+    & span {
+      width: 165px;
+    }
+  }
+
+  .register__who-inputs-wrapper {
+    margin-top: 15px;
+
+    input {
+      width: 420px;
+      padding: 14px 28px;
+
+      border-radius: 8px;
+    }
+  }
+
+  .register__who-input-error {
+    margin-top: 16px;
+  }
+
+  .register__who-password-btn {
+    top: 30px;
+  }
+
+  .register__either {
+    margin-top: 28px;
+  }
+
+  .register__either-title {
+    font-size: 30px;
+  }
+
+  .register__either-description {
+    margin-top: 17px;
+
+    font-size: 18px;
+  }
+
+  .register__either-links {
+    margin-top: 17px;
+  }
+
+  .register__either-rules {
+    margin-top: 22px;
+  }
+
+  .register__sent-button {
+    width: 420px;
+
+    margin-top: 18px;
+  }
+}

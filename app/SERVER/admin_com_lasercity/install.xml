@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+    <name>COM_LASERCITY</name>
+    <creationDate>02.11.2018</creationDate>
+    <author>Kreng Coder</author>
+    <authorEmail>ihor.lischuk@google.com</authorEmail>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0</version>
+    <description>COM_LASERCITY_DESCRIPTION</description>
+    <files folder="site">
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+    <administration>
+        <menu link="index.php?option=com_lasercity">COM_LASERCITY</menu>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <folder>language</folder>
+        </files>
+    </administration>
+</extension>

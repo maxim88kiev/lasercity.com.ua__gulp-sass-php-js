@@ -1,0 +1,103 @@
+.salon-map {
+  min-width: 262px;
+  max-width: 262px;
+  height: 287px;
+}
+
+.salon-map__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6px 6px 7px 21px;
+
+  background-color: #fce5ef;
+}
+
+.salon-map__title {
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.salon-map__button,
+.salon-map__button-close {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: #ffbfdb;
+
+  border: 0;
+
+  border-radius: 10px;
+}
+
+.salon-map__button {
+  &::before {
+    position: absolute;
+    top: 12px;
+    left: 7px;
+
+    content: '';
+
+    width: 17px;
+    height: 17px;
+
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.salon-map__button-close {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 45%;
+    right: 20%;
+    transform: translate(0, -50%);
+
+    content: "";
+    width: 25px;
+    height: 4px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+}
+
+.salon-map__maps {
+  position: relative;
+
+  border: 1px solid #d6d6d6;
+  border-top: 0;
+}
+
+.salon-map__map-iframe {
+  z-index: 100;
+
+  position: relative;
+  width: 260px;
+  height: 232px;
+
+  border: 0;
+}
+
+.salon-map__map-img-wrapper {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+}

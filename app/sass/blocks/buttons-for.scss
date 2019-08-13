@@ -1,0 +1,86 @@
+
+.buttons-for {
+  display: flex;
+
+  margin: 0;
+}
+
+.buttons-for__for{
+  width: 50%;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: 0;
+
+  b {
+    display: block;
+  }
+
+  &--active {
+    .women {
+      background-color: #fff3f8;
+
+    }
+
+    .men {
+      background-color: #cce9fb;
+    }
+  }
+
+  span {
+    display: inline-block;
+
+    min-height: 19px;
+    padding: 13px 27px 13px 0;
+
+    font-size: 14px;
+    text-transform: uppercase;
+
+    background: no-repeat;
+    background-position: right 50%;
+
+    background-size: 19px;
+  }
+
+  &--women {
+    span {
+      background-image: url(../img/woman.svg);
+    }
+  }
+
+  &--men {
+    span {
+      background-image: url(../img/man.svg);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .buttons-for__for {
+    width: 145px;
+
+    &--women {
+      order: 1;
+
+      margin-left: 30px;
+    }
+
+    b {
+      border-radius: 6px;
+    }
+
+    span {
+      padding: 12px 0 8px 35px;
+
+
+      font-size: 16px;
+      text-transform: lowercase;
+      font-weight: normal;
+
+      background-position: 0 50%;
+
+      background-size: 22px;
+    }
+  }
+}

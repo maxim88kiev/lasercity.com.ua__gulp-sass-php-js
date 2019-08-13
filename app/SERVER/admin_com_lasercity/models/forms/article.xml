@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_ARTICLE"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="head_description"
+               type="languages"
+               label="Description"
+               hint="Description"
+               field="text"
+        />
+
+        <field name="main_image"
+               type="media"
+               label="Постер"
+               preview="true"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="images"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_IMAGE">
+            <form>
+                <field name="image"
+                       type="media"
+                       preview="true"
+                       label="COM_LASERCITY_TABLE_IMAGE">
+                </field>
+            </form>
+        </field>
+
+        <field name="date"
+               type="calendar"
+               default="NOW"
+               label="Дата создания"
+        />
+
+        <field name="description"
+               type="languages"
+               label="COM_LASERCITY_TABLE_DESCRIPTION"
+               hint="COM_LASERCITY_TABLE_DESCRIPTION"
+               field="editor"
+        />
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               description=""
+               class="chzn-color-state"
+               filter="intval"
+               size="1"
+               default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+    <fieldset name="location" label="Город проведения">
+        <field name="city_id"
+               type="dsql"
+
+               lang_column="title"
+               lang_object="citie"
+
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+    </fieldset>
+    <fieldset name="opengraph" label="Open Graph">
+        <field name="og:image"
+               type="media"
+               label="og:image"
+               preview="true"
+        />
+        <field name="og:title"
+               type="languages"
+               label="og:title"
+               field="text"
+        />
+        <field name="og:description"
+               type="languages"
+               label="og:description"
+               field="text"
+        />
+    </fieldset>
+</form>

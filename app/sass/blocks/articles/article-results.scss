@@ -1,0 +1,160 @@
+.article-results {
+  margin: 35px 0;
+}
+
+.article-results__title {
+  font-size: 16px;
+}
+
+.article-results__wrapper {
+  padding: 0 15px;
+}
+
+.article-results__text {
+  margin: 20px 0 0;
+
+  color: #333333;
+  line-height: 15px;
+}
+
+.article-results__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include list-unstyled;
+}
+
+.article-results__item {
+  position: relative;
+
+  display: flex;
+
+  margin-top: 13px;
+}
+
+.article-results__item-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 1px 1px 5px;
+
+  &--before {
+    background-color: #f5f5f5;
+
+    .article-results__item-description {
+      color: #666666;
+    }
+  }
+
+  &--after {
+    margin-left: 3px;
+
+    background-color: #ffebf3;
+
+    .article-results__item-description {
+      font-weight: bold;
+    }
+  }
+}
+
+.article-results__item-description {
+  align-self: center;
+
+  margin-top: 5px;
+
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.article-results__item-arrow {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 31px;
+  height: 31px;
+
+  background-color: #ffb4d2;
+
+  border-radius: 50%;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    content: '';
+    width: 13px;
+    height: 13px;
+
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .article-results {
+    margin: 45px 0;
+  }
+
+  .article-results__title {
+    font-size: 21px;
+  }
+
+  .article-results__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .article-results__text {
+    margin-top: 30px;
+
+    font-size: 16px;
+    line-height: 21px;
+
+    &:first-letter {
+      margin-left: 10px;
+    }
+  }
+
+  .article-results__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-results__item {
+    margin-top: 30px;
+  }
+
+  .article-results__item-wrapper {
+    padding: 5px 5px 12px;
+
+    &--after {
+      margin-left: 7px;
+    }
+  }
+
+  .article-results__item-description {
+    margin-top: 12px;
+
+    font-size: 14px;
+  }
+
+  .article-results__item-arrow {
+    bottom: 13px;
+
+    width: 61px;
+    height: 61px;
+
+    &:before {
+      width: 28px;
+      height: 28px;
+
+      border-width: 2px;
+    }
+  }
+}

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_TABLE_BASIC_INFORMATION"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="organization"
+               type="dsql"
+               lang_column="title"
+               lang_object="organization"
+               label="COM_LASERCITY_TABLE_ORGANIZATION"
+               query="SELECT `id` FROM `#__lasercity_organizations` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="logo"
+               showon="organization:0"
+               type="media"
+               label="COM_LAVERCITY_TABLE_LOGOTYPE"
+               preview="true"
+        />
+
+        <field name="type"
+               showon="organization:0"
+               type="languages"
+               label="COM_LASERCITY_TABLE_TYPE_SALON"
+               hint="COM_LASERCITY_TABLE_TYPE_SALON"
+               field="text"
+        />
+
+        <field name="main_image"
+               type="media"
+               label="Главное фото"
+               preview="true"
+        />
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="head_description"
+               type="languages"
+               label="Description"
+               hint="Description"
+               field="text"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="phones"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LAVERCITY_TABLE_PHONES">
+            <form>
+                <field name="phone"
+                       type="text"
+                       label="COM_LAVERCITY_TABLE_PHONE"
+                       hint="COM_LAVERCITY_TABLE_PHONE"
+                />
+            </form>
+        </field>
+
+        <field name="comforts"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_COMFORTS">
+            <form>
+                <field name="comfort"
+                       type="dsql"
+                       lang_column="title"
+                       lang_object="comfort"
+                       label="COM_LASERCITY_TABLE_COMFORT"
+                       query="SELECT `id` FROM `#__lasercity_comforts` WHERE `published`"
+                       key_field="id"
+                       value_field="value">
+                </field>
+            </form>
+        </field>
+
+        <field name="prices"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_PRICES">
+            <form>
+                <field name="price"
+                       type="dsql"
+                       lang_column="title"
+                       lang_object="price"
+                       label="COM_LASERCITY_TABLE_PRICE_STR"
+                       query="SELECT `id` FROM `#__lasercity_prices` WHERE `published`"
+                       key_field="id"
+                       value_field="value">
+                </field>
+            </form>
+        </field>
+
+        <field name="apparats"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_APPARATS">
+            <form>
+                <field name="apparat"
+                       type="sql"
+                       label="COM_LASERCITY_TABLE_APPARAT"
+                       query="SELECT `id`, `title` FROM `#__lasercity_apparats` WHERE `published`"
+                       key_field="id"
+                       value_field="title">
+                </field>
+            </form>
+        </field>
+
+        <field name="schedule"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_SCHEDULE"
+        >
+            <form>
+                <field name="monday" type="checkbox" label="COM_LASERCITY_TABLE_MONDAY"/>
+                <field name="tuesday" type="checkbox" label="COM_LASERCITY_TABLE_TUESDAY"/>
+                <field name="wednesday" type="checkbox" label="COM_LASERCITY_TABLE_WEDNESDAY"/>
+                <field name="thursday" type="checkbox" label="COM_LASERCITY_TABLE_THURSDAY"/>
+                <field name="friday" type="checkbox" label="COM_LASERCITY_TABLE_FRIDAY"/>
+                <field name="saturday" type="checkbox" label="COM_LASERCITY_TABLE_SATURDAY"/>
+                <field name="sunday" type="checkbox" label="COM_LASERCITY_TABLE_SUNDAY"/>
+                <field name="time" type="time" hint="COM_LASERCITY_TABLE_TIME_WORK"
+                       label="COM_LASERCITY_TABLE_TIME_WORK"/>
+            </form>
+        </field>
+
+        <field name="images"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_IMAGE">
+            <form>
+                <field name="image"
+                       type="media"
+                       preview="true"
+                       label="COM_LASERCITY_TABLE_IMAGE">
+                </field>
+            </form>
+        </field>
+
+        <field name="description"
+               type="languages"
+               label="COM_LASERCITY_TABLE_DESCRIPTION"
+               hint="COM_LASERCITY_TABLE_DESCRIPTION"
+               field="editor"
+        />
+    </fieldset>
+    <fieldset name="location" label="COM_LASERCITY_TABLE_LOCATION">
+        <field name="city"
+               type="dsql"
+
+               lang_column="title"
+               lang_object="citie"
+
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="district"
+               type="dsql"
+
+               update_onchange="city#getDistricts#true"
+               default_option="0#COM_LASERCITY_TABLE_NOT_SPECIFIED"
+
+               lang_column="title"
+               lang_object="district"
+
+               label="COM_LASERCITY_TABLE_DISTRICT"
+               query="SELECT `id` FROM `#__lasercity_districts` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="micro_district"
+               type="dsql"
+
+               update_onchange="district#getMicroDistricts#true"
+               default_option="0#COM_LASERCITY_TABLE_NOT_SPECIFIED"
+
+               lang_column="title"
+               lang_object="micro_district"
+
+               label="COM_LASERCITY_TABLE_MICRO_DISTRICT"
+               query="SELECT `id` FROM `#__lasercity_micro_districts` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="metro"
+
+               update_onchange="city#getMetro#true"
+               default_option="0#COM_LASERCITY_TABLE_NOT_SPECIFIED"
+
+               type="dsql"
+               lang_column="title"
+               lang_object="metro"
+               label="COM_LASERCITY_TABLE_METRO"
+               query="SELECT `id` FROM `#__lasercity_metro` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="location"
+
+               prefix="type"
+
+               update_onchange="city#getLocations#true"
+               default_option="0#COM_LASERCITY_TABLE_NOT_SPECIFIED"
+
+               type="dsql"
+               lang_column="title"
+               lang_object="location"
+               label="COM_LASERCITY_TABLE_LOCATION"
+               query="SELECT `id`, `type` FROM `#__lasercity_locations` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="number_home"
+               type="text"
+               label="COM_LAVERCITY_TABLE_NUMBER_HOUSE"
+               hint="COM_LAVERCITY_TABLE_NUMBER_HOUSE"
+        />
+
+        <field name="address"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ADDRESS"
+               hint="COM_LAVERCITY_TABLE_ADDRESS"
+        />
+
+        <field name="coordinate"
+               type="text"
+               label="COM_LASERCITY_TABLE_COORDINATE"
+               hint="COM_LASERCITY_TABLE_COORDINATE"
+        />
+    </fieldset>
+    <fieldset name="premium" label="COM_LASERCITY_TABLE_PREMIUM">
+        <field name="site"
+               type="text"
+               label="COM_LASERCITY_TABLE_SITE"
+               hint="COM_LASERCITY_TABLE_SITE"
+        />
+
+        <field name="social_networks"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LAVERCITY_TABLE_SOCIAL_NETWORKS">
+            <form>
+                <!--<field name="type"
+                       type="list"
+                       label="Тип соц сети">
+                    <option value="fb">Facebook</option>
+                    <option value="yt">YouTube</option>
+                    <option value="ig">Instagram</option>
+                    <option value="vb">Twitter</option>
+                    <option value="tg">Telegram</option>
+                </field>-->
+                <field name="url"
+                       type="text"
+                       label="URL"
+                       hint="url"
+                />
+            </form>
+        </field>
+    </fieldset>
+    <fieldset name="settings" label="COM_LASERCITY_TABLE_SETTINGS">
+        <field name="ordering"
+               type="text"
+               label="COM_LASERCITY_TABLE_ORDERING"
+               hint="COM_LASERCITY_TABLE_ORDERING"
+        />
+
+        <field name="premium"
+               type="list"
+               label="COM_LASERCITY_TABLE_PREMIUM"
+               class="chzn-color-state">
+            <option value="0">COM_LASERCITY_TABLE_PREMIUM_OFF</option>
+            <option value="1">COM_LASERCITY_TABLE_PREMIUM_ON</option>
+        </field>
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+    <fieldset name="opengraph" label="Open Graph">
+        <field name="og:image"
+               type="media"
+               label="og:image"
+               preview="true"
+        />
+        <field name="og:title"
+               type="languages"
+               label="og:title"
+               field="text"
+        />
+        <field name="og:description"
+               type="languages"
+               label="og:description"
+               field="text"
+        />
+    </fieldset>
+</form>

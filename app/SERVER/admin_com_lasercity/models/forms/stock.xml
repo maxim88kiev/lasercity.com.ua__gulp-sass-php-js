@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details"
+              label="COM_LASERCITY_VIEW_NAME_STOCK"
+              description="COM_LASERCITY_NOTIFICATION_STOCK"
+    >
+        <field name="id"
+               type="hidden"
+        />
+
+        <field name="organization"
+               type="dsql"
+               lang_column="title"
+               lang_object="organization"
+               label="COM_LASERCITY_TABLE_ORGANIZATION"
+               query="SELECT `id` FROM `#__lasercity_organizations` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+
+        <field name="title"
+               type="languages"
+               label="COM_LAVERCITY_TABLE_TITLE"
+               hint="COM_LAVERCITY_TABLE_TITLE"
+               field="text"
+        />
+
+        <field name="head_description"
+               type="languages"
+               label="Description"
+               hint="Description"
+               field="text"
+        />
+
+        <field name="image"
+               type="media"
+               label="Постер"
+               preview="true"
+        />
+
+        <field name="alias"
+               type="text"
+               label="COM_LAVERCITY_TABLE_ALIAS"
+               hint="COM_LAVERCITY_TABLE_ALIAS"
+               required="true"
+        />
+
+        <field name="affiliate_id"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="Филиали где будет проходить акция">
+            <form>
+                <field name="affiliate_id"
+                       type="dsql"
+                       lang_column="title"
+                       lang_object="affiliate"
+                       label="COM_LASERCITY_TABLE_AFFILIATE"
+                       query="SELECT `id` FROM `#__lasercity_affiliates` WHERE `published`"
+                       key_field="id"
+                       value_field="value">
+                    <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+                </field>
+            </form>
+        </field>
+
+        <field name="images"
+               type="subform"
+               layout="joomla.form.field.subform.repeatable-table"
+               multiple="true"
+               label="COM_LASERCITY_TABLE_IMAGE">
+            <form>
+                <field name="images"
+                       type="media"
+                       preview="true"
+                       label="COM_LASERCITY_TABLE_IMAGE">
+                </field>
+            </form>
+        </field>
+
+        <field name="discount"
+               type="text"
+               label="Скидка - числом"
+               required="true"
+        />
+
+        <field name="date_added"
+                type="newcalendar"
+                label="Дата начала"
+        />
+
+        <field name="date_remove"
+               type="newcalendar"
+               label="Дата окончания"
+        />
+        
+
+        <field name="description"
+               type="languages"
+               label="Описание"
+               hint="description"
+               field="editor"
+        />
+
+        <field name="conditions"
+               type="languages"
+               label="Условия"
+               hint="conditions"
+               field="editor"
+        />
+
+        <!--<field name="default_language"
+               type="sql"
+               label="COM_LAVERCITY_TABLE_DEFAULT_LANGUAGE"
+               query="SELECT `lang_code`, `title_native` FROM `#__languages` WHERE `published`"
+               key_field="lang_code"
+               value_field="title_native">
+        </field>-->
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               description=""
+               class="chzn-color-state">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+    <fieldset name="location" label="Город проведения">
+        <field name="city_id"
+               type="dsql"
+
+               lang_column="title"
+               lang_object="citie"
+
+               label="COM_LASERCITY_TABLE_CITY"
+               query="SELECT `id` FROM `#__lasercity_cities` WHERE `published`"
+               key_field="id"
+               value_field="value">
+            <option value="0">COM_LASERCITY_TABLE_NOT_SPECIFIED</option>
+        </field>
+    </fieldset>
+    <fieldset name="opengraph" label="Open Graph">
+        <field name="og:image"
+               type="media"
+               label="og:image"
+               preview="true"
+        />
+        <field name="og:title"
+               type="languages"
+               label="og:title"
+               field="text"
+        />
+        <field name="og:description"
+               type="languages"
+               label="og:description"
+               field="text"
+        />
+    </fieldset>
+</form>
