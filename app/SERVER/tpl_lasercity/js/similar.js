@@ -12,7 +12,6 @@
   //HeaderSetting
   window.plugins.globalClick.add({
     selector: '.page-header__setting-city',
-    /*containsSelector: '.page-header__setting-city-list',*/
     callBackIn: function (obj) {
         /*console.log('in', obj);*/
       obj.block.classList.add('page-header__setting-city--active');
