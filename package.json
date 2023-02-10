@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "del": "^3.0.0",
-    "lighthouse": "^5.0.0"
+    "lighthouse": "^10.0.0"
   }
 }
